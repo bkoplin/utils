@@ -39,6 +39,7 @@ export default [
       },
       {
         file: input.replace('src/', 'dist/').replace('.ts', '.js'),
+        name: 'utils',
         format: 'umd',
       },
     ],
