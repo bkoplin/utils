@@ -13,7 +13,7 @@
     "url": "https://github.com/bkoplin/utils.git"
   },
   "publishConfig": {
-    "@bkoplin:registry": "https://npm.pkg.com"
+    "@bkoplin:registry": "https://npm.pkg.github.com"
   },
   "bugs": {
     "url": "https://github.com/bkoplin/utils/issues"
