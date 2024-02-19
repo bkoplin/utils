@@ -6,7 +6,19 @@ import json from '@rollup/plugin-json'
 import alias from '@rollup/plugin-alias'
 
 const entries = [
-  'src/index.ts',
+  'src/vendor.ts',
+  'src/types.ts',
+  'src/time.ts',
+  'src/string.ts',
+  'src/p.ts',
+  'src/math.ts',
+  'src/is.ts',
+  'src/function.ts',
+  'src/guards.ts',
+  'src/array.ts',
+  'src/base.ts',
+  'src/equal.ts',
+  'src/object.ts',
 ]
 
 const plugins = [
@@ -32,22 +44,24 @@ export default [
       {
         file: input.replace('src/', 'dist/').replace('.ts', '.js'),
         name: 'utils',
-        format: 'iife',
+        format: 'umd',
       },
     ],
     external: [],
     plugins,
+    clean: true,
   })),
   ...entries.map(input => ({
     input,
     output: [
       {
         file: input.replace('src/', 'dist/').replace('.ts', '.d.ts'),
-        format: 'iife',
+        format: 'umd',
         name: 'utils',
       },
     ],
     external: [],
+    clean: true,
     plugins: [
       dts({ respectExternal: true }),
     ],
