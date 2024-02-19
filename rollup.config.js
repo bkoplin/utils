@@ -37,6 +37,10 @@ export default [
         file: input.replace('src/', 'dist/').replace('.ts', '.cjs'),
         format: 'cjs',
       },
+      {
+        file: input.replace('src/', 'dist/').replace('.ts', '.js'),
+        format: 'umd',
+      },
     ],
     external: [],
     plugins,
@@ -50,7 +54,8 @@ export default [
       },
       {
         file: input.replace('src/', 'dist/').replace('.ts', '.d.ts'),
-        format: 'esm',
+        format: 'umd',
+        name: 'utils',
       },
       {
         file: input.replace('src/', 'dist/').replace('.ts', '.d.cts'),
