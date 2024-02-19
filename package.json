@@ -13,7 +13,7 @@
     "url": "https://github.com/bkoplin/utils.git"
   },
   "publishConfig": {
-    "@bkoplin:registry": "https://npm.pkg.github.com"
+    "@bkoplin:registry": "https://npm.pkg.com"
   },
   "bugs": {
     "url": "https://github.com/bkoplin/utils/issues"
@@ -29,7 +29,7 @@
       "browser": "./dist/index.js"
     }
   },
-  "main": "dist/index.cjs",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
