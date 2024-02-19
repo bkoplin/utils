@@ -10,7 +10,10 @@
   "homepage": "https://github.com/bkoplin/utils#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bkoplin/utils.git"
+    "url": "https://github.com/bkoplin/utils.git"
+  },
+  "publishConfig": {
+    "@bkoplin:registry": "https://npm.pkg.github.com"
   },
   "bugs": {
     "url": "https://github.com/bkoplin/utils/issues"
