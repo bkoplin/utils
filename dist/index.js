@@ -1,8 +1,5 @@
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.utils = {}));
-})(this, (function (exports) { 'use strict';
+var utils = (function (exports) {
+  'use strict';
 
   function clamp(n, min, max) {
     return Math.min(max, Math.max(min, n));
@@ -897,7 +894,6 @@
   exports.debounce = debounce;
   exports.deepMerge = deepMerge;
   exports.deepMergeWithArray = deepMergeWithArray;
-  exports.default = utils;
   exports.ensurePrefix = ensurePrefix;
   exports.ensureSuffix = ensureSuffix;
   exports.flattenArrayable = flattenArrayable;
@@ -950,7 +946,8 @@
   exports.toString = toString;
   exports.uniq = uniq;
   exports.uniqueBy = uniqueBy;
+  exports.utils = utils;
 
-  Object.defineProperty(exports, '__esModule', { value: true });
+  return exports;
 
-}));
+})({});

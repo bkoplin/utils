@@ -30,17 +30,9 @@ export default [
     input,
     output: [
       {
-        file: input.replace('src/', 'dist/').replace('.ts', '.mjs'),
-        format: 'esm',
-      },
-      {
-        file: input.replace('src/', 'dist/').replace('.ts', '.cjs'),
-        format: 'cjs',
-      },
-      {
         file: input.replace('src/', 'dist/').replace('.ts', '.js'),
         name: 'utils',
-        format: 'umd',
+        format: 'iife',
       },
     ],
     external: [],
@@ -50,17 +42,9 @@ export default [
     input,
     output: [
       {
-        file: input.replace('src/', 'dist/').replace('.ts', '.d.mts'),
-        format: 'esm',
-      },
-      {
         file: input.replace('src/', 'dist/').replace('.ts', '.d.ts'),
-        format: 'umd',
+        format: 'iife',
         name: 'utils',
-      },
-      {
-        file: input.replace('src/', 'dist/').replace('.ts', '.d.cts'),
-        format: 'cjs',
       },
     ],
     external: [],
