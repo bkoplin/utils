@@ -13,7 +13,8 @@ import * as _promise from './promise'
 import * as _vendor from './vendor'
 import * as _p from './p'
 
-export const utils = { array: _array, base: _base, equal: _equal, guards: _guards, is: _is, math: _math, string: _string, time: _time, types: _types, function: _function, object: _object, promise: _promise, vendor: _vendor, p: _p }
+const utils = { array: _array, base: _base, equal: _equal, guards: _guards, is: _is, math: _math, string: _string, time: _time, types: _types, function: _function, object: _object, promise: _promise, vendor: _vendor, p: _p }
+export default utils
 
 export * from './array'
 export * from './base'
