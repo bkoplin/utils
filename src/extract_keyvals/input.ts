@@ -7,10 +7,17 @@ import { attempt, isError } from 'lodash-es'
 
 export function extract_keyvals(input: string) {
   const regex = /(?<key>(?:\w|_|-|\d)+)"?=(?<value>(?:(?:\w|_|-|\d)+)|(?:\[[^\]]+\])|(?:"[^"]+"))/g
+  const server = /\/\d+\.\d+\.\d+\.\d+\:\d+/
   const equalsMatches = input.matchAll(regex)
-  return Array.from(equalsMatches).reduce((acc, match) => {
+  const serverMatches = server.exec(input)
+  const obj = Array.from(equalsMatches).reduce((acc, match) => {
     if (match.groups?.key && match.groups?.value)
       return { ...acc, [match.groups.key]: isError(attempt(JSON.parse, match.groups.value)) ? match.groups.value : JSON.parse(match.groups.value) }
     else return acc
   }, {})
+  if (serverMatches !== null)
+    return { server: serverMatches[0], ...obj }
+  else if (Object.keys(obj).length)
+    return obj
+  else return null
 }

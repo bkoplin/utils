@@ -326,14 +326,22 @@ var attempt_default = attempt;
 // input.ts
 function extract_keyvals(input) {
   const regex = /(?<key>(?:\w|_|-|\d)+)"?=(?<value>(?:(?:\w|_|-|\d)+)|(?:\[[^\]]+\])|(?:"[^"]+"))/g;
+  const server = /\/\d+\.\d+\.\d+\.\d+\:\d+/;
   const equalsMatches = input.matchAll(regex);
-  return Array.from(equalsMatches).reduce((acc, match) => {
+  const serverMatches = server.exec(input);
+  const obj = Array.from(equalsMatches).reduce((acc, match) => {
     var _a, _b;
     if (((_a = match.groups) == null ? void 0 : _a.key) && ((_b = match.groups) == null ? void 0 : _b.value))
       return __spreadProps(__spreadValues({}, acc), { [match.groups.key]: isError_default(attempt_default(JSON.parse, match.groups.value)) ? match.groups.value : JSON.parse(match.groups.value) });
     else
       return acc;
   }, {});
+  if (serverMatches !== null)
+    return __spreadValues({ server: serverMatches[0] }, obj);
+  else if (Object.keys(obj).length)
+    return obj;
+  else
+    return null;
 }
 
 /**
