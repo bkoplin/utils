@@ -55,6 +55,7 @@
     "lodash-es": "^4.17.21",
     "magic-regexp": "^0.7.0",
     "p-limit": "^5.0.0",
+    "plv8ify": "^0.0.56",
     "rollup": "^4.7.0",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.0",
