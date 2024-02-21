@@ -51,12 +51,14 @@
     "eslint": "npm:eslint-ts-patch@8.55.0-1",
     "eslint-ts-patch": "8.55.0-1",
     "esno": "^4.0.0",
+    "magic-regexp": "^0.7.0",
     "p-limit": "^5.0.0",
     "rollup": "^4.7.0",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.0",
     "throttle-debounce": "5.0.0",
     "typescript": "^5.3.3",
+    "ufo": "^1.4.0",
     "vite": "^5.0.7",
     "vitest": "^1.0.4"
   }
