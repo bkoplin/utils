@@ -38,5 +38,7 @@
     "json",
     "jsonc",
     "yaml"
-  ]
+  ],
+  "vitest.commandLine": "pnpm test ",
+  "vitest.enable": true
 }
