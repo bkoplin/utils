@@ -7,9 +7,9 @@ import { attempt, groupBy, isEmpty, isError, isNil, trim, uniq } from 'lodash-es
 
 export function extract_keyvals(input: string) {
   const regex = /(?<key>(?:\w|_|-|\d)+)"?=(?<value>(?:(?:[A-Z][a-z]{2} [A-Z][a-z]{2} \d{2} \d{2}:\d{2}:\d{2} [A-Z]{3} \d{4})|(?:\w|_|-|\d)+)|(?:\[[^\]]+\])|(?:"[^"]+"))/g
-  const server = /\/\d+\.\d+\.\d+\.\d+\:\d+/
+  const server = /(\/\d+\.\d+\.\d+\.\d+\:\d+)/
   const equalsMatches = input.matchAll(regex)
-  const serverMatches = server.exec(input)
+  const serverMatches = server.exec(input)?.[1]
   const groups = Array.from(equalsMatches).reduce((acc, match) => {
     if (typeof match.groups !== 'undefined') {
       const { key, value: origValue } = match.groups
@@ -31,5 +31,5 @@ export function extract_keyvals(input: string) {
       return null
     else return obj
   }
-  else { return { server: serverMatches[0], ...obj } }
+  else { return { ...obj, server: serverMatches } }
 }

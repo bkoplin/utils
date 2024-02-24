@@ -1,6 +1,8 @@
 DROP FUNCTION IF EXISTS extract_keyvals(input text);
 CREATE OR REPLACE FUNCTION extract_keyvals(input text) RETURNS JSONB AS $plv8ify$
 var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
@@ -16,6 +18,7 @@ var __spreadValues = (a, b) => {
     }
   return a;
 };
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 
 // node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/_freeGlobal.js
 var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
@@ -1866,10 +1869,11 @@ var uniq_default = uniq;
 
 // src/extract_keyvals/input.ts
 function extract_keyvals(input) {
+  var _a;
   const regex = /(?<key>(?:\w|_|-|\d)+)"?=(?<value>(?:(?:[A-Z][a-z]{2} [A-Z][a-z]{2} \d{2} \d{2}:\d{2}:\d{2} [A-Z]{3} \d{4})|(?:\w|_|-|\d)+)|(?:\[[^\]]+\])|(?:"[^"]+"))/g;
-  const server = /\/\d+\.\d+\.\d+\.\d+\:\d+/;
+  const server = /\/(\d+\.\d+\.\d+\.\d+\:\d+)/;
   const equalsMatches = input.matchAll(regex);
-  const serverMatches = server.exec(input);
+  const serverMatches = (_a = server.exec(input)) == null ? void 0 : _a[1];
   const groups = Array.from(equalsMatches).reduce((acc, match) => {
     if (typeof match.groups !== "undefined") {
       const { key, value: origValue } = match.groups;
@@ -1891,7 +1895,7 @@ function extract_keyvals(input) {
     else
       return obj;
   } else {
-    return __spreadValues({ server: serverMatches[0] }, obj);
+    return __spreadProps(__spreadValues({}, obj), { server: serverMatches });
   }
 }
 

@@ -1,0 +1,4068 @@
+[
+  "
+00:00:00.000 --> 00:00:01.690
+<v Bourov, Anthony>Just pull them up quickly while we're here.</v>
+",
+  "
+00:00:15.290 --> 00:00:15.430
+<v Bourov, Anthony>But.</v>
+",
+  "
+00:00:51.230 --> 00:00:51.950
+<v Koplin, Benjamin I.>And then he what?</v>
+",
+  "
+00:00:52.010 --> 00:00:53.070
+<v Koplin, Benjamin I.>What do we call?</v>
+",
+  "
+00:00:54.920 --> 00:00:55.100
+<v Bourov, Anthony>Mm-hmm.</v>
+",
+  "
+00:00:55.120 --> 00:00:58.070
+<v Koplin, Benjamin I.>So you sent us 2 two sets of logs.</v>
+",
+  "
+00:00:58.180 --> 00:01:03.590
+<v Koplin, Benjamin I.>One you called the gateway logs and the other one is just says with source type.</v>
+",
+  "
+00:01:03.960 --> 00:01:05.560
+<v Koplin, Benjamin I.>What do we call that one?</v>
+",
+  "
+00:01:05.600 --> 00:01:08.710
+<v Koplin, Benjamin I.>We've been talking as we've been going through and analyzing them as a team.</v>
+",
+  "
+00:01:09.260 --> 00:01:15.120
+<v Koplin, Benjamin I.>We like yesterday we realized we don't know what to call this set to distinguish it from the other set.</v>
+",
+  "
+00:01:16.110 --> 00:01:18.790
+<v Bourov, Anthony>OK, so the gate.</v>
+",
+  "
+00:01:18.830 --> 00:01:19.430
+<v Bourov, Anthony>So.</v>
+",
+  "
+00:01:19.780 --> 00:01:25.550
+<v Bourov, Anthony>So the one with source type was like uh, essentially.</v>
+",
+  "
+00:01:25.560 --> 00:01:29.570
+<v Bourov, Anthony>That's all the I mean, both of them are coming from the server logs.</v>
+",
+  "
+00:01:29.580 --> 00:01:39.540
+<v Bourov, Anthony>But uh, the first one is event log, essentially of everything that happened on this different servers on the different services.</v>
+",
+  "
+00:01:30.440 --> 00:01:30.720
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:01:39.550 --> 00:01:41.360
+<v Bourov, Anthony>So it's across different services.</v>
+",
+  "
+00:01:40.140 --> 00:01:40.350
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:01:42.030 --> 00:01:43.400
+<v Bourov, Anthony>It's everything that happened.</v>
+",
+  "
+00:01:43.610 --> 00:01:54.430
+<v Bourov, Anthony>The Gateway log is whatever we got it is, is everything that God came off the physical gateway hardware, not the gateway service, the gateway.</v>
+",
+  "
+00:01:54.620 --> 00:02:06.650
+<v Bourov, Anthony>So the gateway every time it connects, it pushes it, pushes all of its loves to us, and most of those are just kind of out of those are just audit logging for debugging purposes.</v>
+",
+  "
+00:02:00.180 --> 00:02:00.410
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:02:07.020 --> 00:02:11.030
+<v Bourov, Anthony>But you were kind of curious to know what's happening on the hardware side.</v>
+",
+  "
+00:02:07.120 --> 00:02:07.350
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:02:11.240 --> 00:02:15.410
+<v Bourov, Anthony>So would that kind of just that tells you a little bit more of what's been going that?</v>
+",
+  "
+00:02:15.460 --> 00:02:19.920
+<v Bourov, Anthony>And I'm not overly familiar with those logs, so I can't tell you much about them other than that.</v>
+",
+  "
+00:02:18.950 --> 00:02:19.170
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:02:20.800 --> 00:02:24.770
+<v Bourov, Anthony>That's everything that's happening on the hardware side.</v>
+",
+  "
+00:02:25.120 --> 00:02:26.640
+<v Bourov, Anthony>You know, during during that time.</v>
+",
+  "
+00:02:27.240 --> 00:02:27.480
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:02:27.960 --> 00:02:32.100
+<v Bourov, Anthony>So it has things like Volt battery voltage.</v>
+",
+  "
+00:02:32.110 --> 00:02:35.780
+<v Bourov, Anthony>It has things like how strong the Billy Connection was and things like that.</v>
+",
+  "
+00:02:36.450 --> 00:02:36.700
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:02:36.560 --> 00:02:50.040
+<v Bourov, Anthony>Uh, but these are really like purely debugged kind of, you know activity log, so I this is something that PD team would have you know would have to share share more color on.</v>
+",
+  "
+00:02:48.400 --> 00:02:48.800
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:02:48.810 --> 00:02:49.170
+<v Koplin, Benjamin I.>Yep, Yep.</v>
+",
+  "
+00:02:49.180 --> 00:02:54.410
+<v Koplin, Benjamin I.>Yep, that we that we got there wouldn't be fair to ask you to comment on those logs.</v>
+",
+  "
+00:02:54.420 --> 00:02:58.390
+<v Koplin, Benjamin I.>But we we just couldn't remember what it was that we should call.</v>
+",
+  "
+00:02:57.250 --> 00:02:57.440
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:02:57.450 --> 00:03:00.020
+<v Bourov, Anthony>The one I said with source type is basically just.</v>
+",
+  "
+00:03:00.370 --> 00:03:02.420
+<v Bourov, Anthony>It's across multiple services, right?</v>
+",
+  "
+00:03:02.430 --> 00:03:04.780
+<v Bourov, Anthony>It's it's, it's all this.</v>
+",
+  "
+00:03:03.360 --> 00:03:03.580
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:03:04.910 --> 00:03:08.340
+<v Bourov, Anthony>All the all the events that it's basically Zeus system logs.</v>
+",
+  "
+00:03:08.350 --> 00:03:11.020
+<v Bourov, Anthony>I think that would be a good way to describe Zeus system logs.</v>
+",
+  "
+00:03:08.940 --> 00:03:09.290
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:03:11.620 --> 00:03:11.870
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:03:21.350 --> 00:03:22.700
+<v Koplin, Benjamin I.>OK, alright.</v>
+",
+  "
+00:03:22.710 --> 00:03:24.230
+<v Koplin, Benjamin I.>So let me here's what we're gonna do today.</v>
+",
+  "
+00:03:24.240 --> 00:03:29.060
+<v Koplin, Benjamin I.>And I think we're, we're at the point now where we've actually, I think figured out how to.</v>
+",
+  "
+00:03:30.460 --> 00:03:35.540
+<v Koplin, Benjamin I.>It's how to classify the different log types.</v>
+",
+  "
+00:03:36.450 --> 00:03:36.750
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:03:36.530 --> 00:03:37.160
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:03:37.510 --> 00:03:42.440
+<v Koplin, Benjamin I.>And so we wanna chat with you about how we're classifying them.</v>
+",
+  "
+00:03:42.530 --> 00:03:47.580
+<v Koplin, Benjamin I.>You know, like they have you say you're kind of that's not really what I would call that.</v>
+",
+  "
+00:03:43.340 --> 00:03:43.510
+<v Bourov, Anthony>Sure.</v>
+",
+  "
+00:03:49.640 --> 00:04:28.410
+<v Koplin, Benjamin I.>And then having, since we know we think how to classify these and the information that exists in the different classifications and then also how to tie the logs together so we can see from like the original part we can we can see the the the gateway making the request for patch commands to the server and we can see the server responding with the patch commands and then we can see the gateway sending Patch command results back and then we can see those results getting filtered and handled up at the ITF.</v>
+",
+  "
+00:04:19.570 --> 00:04:19.840
+<v Bourov, Anthony>Mm-hmm.</v>
+",
+  "
+00:04:29.440 --> 00:04:39.820
+<v Koplin, Benjamin I.>We're kind of like we kind of if if we are interpreting it all correctly, we've kind of reached the extent of and and you say, yeah, you guys are doing this right.</v>
+",
+  "
+00:04:35.310 --> 00:04:35.440
+<v Bourov, Anthony>Sure.</v>
+",
+  "
+00:04:40.560 --> 00:04:43.570
+<v Koplin, Benjamin I.>We've reached the extent of what we can learn.</v>
+",
+  "
+00:04:43.580 --> 00:04:53.070
+<v Koplin, Benjamin I.>We think from this particular enrollment and we'd wanna transition to, we've got like a slightly longer list.</v>
+",
+  "
+00:04:44.930 --> 00:04:45.150
+<v Bourov, Anthony>OK.</v>
+",
+  "
+00:04:49.180 --> 00:04:49.400
+<v Bourov, Anthony>OK.</v>
+",
+  "
+00:04:53.380 --> 00:04:53.890
+<v Koplin, Benjamin I.>So what?</v>
+",
+  "
+00:04:53.650 --> 00:04:53.900
+<v Bourov, Anthony>Mm-hmm.</v>
+",
+  "
+00:04:53.900 --> 00:04:58.730
+<v Koplin, Benjamin I.>Will have accomplished is, we know Anthony knows how to get it out, right?</v>
+",
+  "
+00:04:57.800 --> 00:04:58.020
+<v Bourov, Anthony>Mm-hmm.</v>
+",
+  "
+00:04:58.900 --> 00:05:00.450
+<v Koplin, Benjamin I.>We know we know how to get it in.</v>
+",
+  "
+00:05:01.000 --> 00:05:05.750
+<v Koplin, Benjamin I.>We know how to parse it and how to analyze like how to classify it.</v>
+",
+  "
+00:05:05.980 --> 00:05:10.530
+<v Koplin, Benjamin I.>But then and to analyze it, we need to find anomalies.</v>
+",
+  "
+00:05:10.540 --> 00:05:14.270
+<v Koplin, Benjamin I.>Or, umm, come up with anything like trends.</v>
+",
+  "
+00:05:12.920 --> 00:05:13.140
+<v Bourov, Anthony>Sure.</v>
+",
+  "
+00:05:14.280 --> 00:05:19.460
+<v Koplin, Benjamin I.>We need something to compare it compared this this one too, you know.</v>
+",
+  "
+00:05:18.020 --> 00:05:19.470
+<v Bourov, Anthony>Yeah, yeah, of course.</v>
+",
+  "
+00:05:19.480 --> 00:05:22.090
+<v Bourov, Anthony>Right now you're you have sample of 1 of 1, right?</v>
+",
+  "
+00:05:22.100 --> 00:05:23.810
+<v Bourov, Anthony>So you don't have a, yeah.</v>
+",
+  "
+00:05:22.320 --> 00:05:25.360
+<v Koplin, Benjamin I.>Right. So.</v>
+",
+  "
+00:05:27.820 --> 00:05:31.720
+<v Koplin, Benjamin I.>So why don't we show you how we are classifying these?</v>
+",
+  "
+00:05:31.730 --> 00:05:33.400
+<v Koplin, Benjamin I.>I'm gonna show you kind of a dirty.</v>
+",
+  "
+00:05:32.300 --> 00:05:32.510
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:05:33.830 --> 00:05:35.620
+<v Koplin, Benjamin I.>It's a dirty result of a query.</v>
+",
+  "
+00:05:35.630 --> 00:05:36.390
+<v Koplin, Benjamin I.>In other words, it doesn't.</v>
+",
+  "
+00:05:37.230 --> 00:05:41.210
+<v Koplin, Benjamin I.>Doesn't really do it's.</v>
+",
+  "
+00:05:37.470 --> 00:05:37.650
+<v Bourov, Anthony>Sure.</v>
+",
+  "
+00:05:41.220 --> 00:05:43.090
+<v Koplin, Benjamin I.>It shows a little too much because it's got it's.</v>
+",
+  "
+00:05:43.100 --> 00:05:49.300
+<v Koplin, Benjamin I.>It's combining in a way that, umm, is not as is, is not the final query.</v>
+",
+  "
+00:05:45.010 --> 00:05:45.310
+<v Bourov, Anthony>Yeah, yeah.</v>
+",
+  "
+00:05:49.310 --> 00:05:50.620
+<v Koplin, Benjamin I.>But OK, let me share this.</v>
+",
+  "
+00:05:52.810 --> 00:05:53.260
+<v Koplin, Benjamin I.>So.</v>
+",
+  "
+00:05:56.870 --> 00:05:58.460
+<v Koplin, Benjamin I.>Share window.</v>
+",
+  "
+00:06:00.220 --> 00:06:00.410
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:06:00.420 --> 00:06:04.950
+<v Koplin, Benjamin I.>And I'm sorry, we're staring at like, the bottom of a this is just our scratch pad.</v>
+",
+  "
+00:06:05.080 --> 00:06:05.430
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:06:05.440 --> 00:06:09.080
+<v Koplin, Benjamin I.>So OK, so there's a couple things that we.</v>
+",
+  "
+00:06:05.620 --> 00:06:05.810
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:06:05.820 --> 00:06:06.510
+<v Bourov, Anthony>No, that's fine.</v>
+",
+  "
+00:06:06.520 --> 00:06:07.420
+<v Bourov, Anthony>It's pretty cool though.</v>
+",
+  "
+00:06:11.530 --> 00:06:23.140
+<v Koplin, Benjamin I.>There's a couple things that we're pulling out of each log to be able to #1 join them together regardless of the ideas that are in that log entry.</v>
+",
+  "
+00:06:18.390 --> 00:06:18.670
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:06:23.750 --> 00:06:29.260
+<v Koplin, Benjamin I.>This is not doing it correctly cause we're putting patch commands where we don't want patch commands.</v>
+",
+  "
+00:06:29.270 --> 00:06:41.610
+<v Koplin, Benjamin I.>We don't want them on the initial outgoing request, but what we wanna be able to do is because thankfully the the the analysis request ID leads to a patch command ID leads to a transmission ID.</v>
+",
+  "
+00:06:42.110 --> 00:06:42.790
+<v Koplin, Benjamin I.>We wanna kind of.</v>
+",
+  "
+00:06:42.120 --> 00:06:46.240
+<v Bourov, Anthony>Yeah, you basically you're able to go backwards, which is actually, yeah.</v>
+",
+  "
+00:06:44.770 --> 00:06:46.770
+<v Koplin, Benjamin I.>We're able to go backwards, right?</v>
+",
+  "
+00:06:47.210 --> 00:06:53.650
+<v Koplin, Benjamin I.>And so, umm, but first, let me walk you through like some of the things that we're pulling out of each one of these.</v>
+",
+  "
+00:06:54.550 --> 00:06:55.040
+<v Koplin, Benjamin I.>We are.</v>
+",
+  "
+00:06:56.240 --> 00:07:02.530
+<v Koplin, Benjamin I.>We brought in the time the when we we have two different time fields.</v>
+",
+  "
+00:07:02.800 --> 00:07:07.440
+<v Koplin, Benjamin I.>So actually there's a there's four pieces of time that we think we care about.</v>
+",
+  "
+00:07:03.000 --> 00:07:03.330
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:07:08.090 --> 00:07:11.520
+<v Koplin, Benjamin I.>Umm, maybe three of which will end up relying on.</v>
+",
+  "
+00:07:11.830 --> 00:07:13.400
+<v Koplin, Benjamin I.>There's the what?</v>
+",
+  "
+00:07:13.410 --> 00:07:19.370
+<v Koplin, Benjamin I.>What we're calling the Splunk time, that's the time as its own field in the Splunk log, right?</v>
+",
+  "
+00:07:19.380 --> 00:07:21.240
+<v Koplin, Benjamin I.>So it comes out as underscore time.</v>
+",
+  "
+00:07:19.690 --> 00:07:20.010
+<v Bourov, Anthony>OK.</v>
+",
+  "
+00:07:21.850 --> 00:07:27.500
+<v Koplin, Benjamin I.>This is, umm, converted to UTC just so we can standardize all the time values.</v>
+",
+  "
+00:07:28.010 --> 00:07:44.720
+<v Koplin, Benjamin I.>Interestingly, and I think this may have to do with daylight savings, umm, we are also pulling out the log time and we see that for this this this whole enrollment happened in October which is pre standard.</v>
+",
+  "
+00:07:33.370 --> 00:07:33.930
+<v Bourov, Anthony>I think.</v>
+",
+  "
+00:07:42.260 --> 00:07:42.440
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:07:44.730 --> 00:07:56.810
+<v Koplin, Benjamin I.>It's daylight savings time and so the log time on all all of the entries when converted to UTC is an hour before the Splunk tongue, which is that time field.</v>
+",
+  "
+00:07:57.630 --> 00:08:05.410
+<v Bourov, Anthony>So this case, the lock time is being is UTC, so I would say that there's something up with your Splunk time conversion, not with a lot of time.</v>
+",
+  "
+00:08:06.220 --> 00:08:08.680
+<v Koplin, Benjamin I.>So what the Splunk time here?</v>
+",
+  "
+00:08:08.690 --> 00:08:11.290
+<v Koplin, Benjamin I.>Let me let me show you the spend time.</v>
+",
+  "
+00:08:11.300 --> 00:08:17.170
+<v Koplin, Benjamin I.>So the Splunk, the Splunk time, I'm just gonna get rid of that.</v>
+",
+  "
+00:08:19.360 --> 00:08:25.890
+<v Koplin, Benjamin I.>So the time to timestamp TZ converts it to UTC and Postgres.</v>
+",
+  "
+00:08:25.900 --> 00:08:29.700
+<v Koplin, Benjamin I.>So, well, there's we'll look at it the way it actually came to us.</v>
+",
+  "
+00:08:28.850 --> 00:08:31.160
+<v Bourov, Anthony>There's this post dress OK?</v>
+",
+  "
+00:08:31.240 --> 00:08:34.060
+<v Koplin, Benjamin I.>Yeah, this is Postgres so.</v>
+",
+  "
+00:08:37.280 --> 00:08:39.990
+<v Sayles, Richard>Hey, Ben, do you think you can make your screen just a little smaller so?</v>
+",
+  "
+00:08:41.420 --> 00:08:41.640
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:08:42.230 --> 00:08:45.130
+<v Sayles, Richard>So it's bigger when it reflects through.</v>
+",
+  "
+00:08:45.120 --> 00:08:45.660
+<v Koplin, Benjamin I.>Is that any better?</v>
+",
+  "
+00:08:46.840 --> 00:08:47.140
+<v Sayles, Richard>And.</v>
+",
+  "
+00:08:51.480 --> 00:08:55.180
+<v Mejia, Roswill>If you mouse over to the bottom left, there's like you can zoom in and out.</v>
+",
+  "
+00:08:51.990 --> 00:08:52.120
+<v Sayles, Richard>Yeah.</v>
+",
+  "
+00:08:55.840 --> 00:08:55.980
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:08:57.020 --> 00:08:58.200
+<v Koplin, Benjamin I.>So Anthony, check this out.</v>
+",
+  "
+00:08:57.360 --> 00:08:58.460
+<v Sayles, Richard>Yeah, I'll try that.</v>
+",
+  "
+00:08:58.990 --> 00:09:01.400
+<v Koplin, Benjamin I.>This is the Splunk time as it came over from us.</v>
+",
+  "
+00:09:01.410 --> 00:09:07.940
+<v Koplin, Benjamin I.>We we had like what I just showed you was converting it to UTC so it would take this minus 8.</v>
+",
+  "
+00:09:08.160 --> 00:09:15.660
+<v Koplin, Benjamin I.>It would do it 3rd 17 -, 8 right ohps 17 + 817 + 8.</v>
+",
+  "
+00:09:12.900 --> 00:09:15.410
+<v Bourov, Anthony>Well, so they where did the minus?</v>
+",
+  "
+00:09:15.460 --> 00:09:16.960
+<v Bourov, Anthony>OK, so how did the minus?</v>
+",
+  "
+00:09:16.970 --> 00:09:18.970
+<v Bourov, Anthony>How did we arrive with minus 8?</v>
+",
+  "
+00:09:19.510 --> 00:09:21.200
+<v Koplin, Benjamin I.>That's on the actual log.</v>
+",
+  "
+00:09:21.250 --> 00:09:23.950
+<v Koplin, Benjamin I.>The actual log file has a -, 8.</v>
+",
+  "
+00:09:24.380 --> 00:09:26.530
+<v Bourov, Anthony>It actually logs into the minus 8.</v>
+",
+  "
+00:09:26.760 --> 00:09:27.440
+<v Bourov, Anthony>That's interesting.</v>
+",
+  "
+00:09:26.920 --> 00:09:27.120
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:09:27.450 --> 00:09:29.100
+<v Bourov, Anthony>OK. Interesting.</v>
+",
+  "
+00:09:28.790 --> 00:09:30.250
+<v Koplin, Benjamin I.>So this would be.</v>
+",
+  "
+00:09:32.080 --> 00:09:36.430
+<v Koplin, Benjamin I.>17 + 8 is 25 right?</v>
+",
+  "
+00:09:37.430 --> 00:09:51.600
+<v Koplin, Benjamin I.>Umm to get it into UTC in 25 is 1 in the morning and so that this +8 here is turning October 13th at 5:26 into October 14th at 1:26.</v>
+",
+  "
+00:09:43.220 --> 00:09:43.550
+<v Bourov, Anthony>Right.</v>
+",
+  "
+00:09:51.610 --> 00:09:55.000
+<v Koplin, Benjamin I.>The log time as you mentioned is in UTC.</v>
+",
+  "
+00:09:52.400 --> 00:09:52.600
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:09:55.230 --> 00:09:58.500
+<v Koplin, Benjamin I.>This can be explained by daylight savings right?</v>
+",
+  "
+00:09:59.190 --> 00:10:00.380
+<v Bourov, Anthony>Yeah, it it.</v>
+",
+  "
+00:10:00.740 --> 00:10:15.260
+<v Bourov, Anthony>It can be of Splunk is doing something wrong in this case, so I'm kind of curious because I would trust the right time like the log time is more accurate like it in this case is in UTC.</v>
+",
+  "
+00:10:15.270 --> 00:10:18.770
+<v Bourov, Anthony>So yeah, so so this is October, right?</v>
+",
+  "
+00:10:19.340 --> 00:10:20.010
+<v Koplin, Benjamin I.>This is October.</v>
+",
+  "
+00:10:22.270 --> 00:10:23.270
+<v Koplin, Benjamin I.>October 2021.</v>
+",
+  "
+00:10:36.450 --> 00:10:38.760
+<v Bourov, Anthony>So shouldn't it be minus seven then?</v>
+",
+  "
+00:10:38.770 --> 00:10:39.570
+<v Bourov, Anthony>Not minus 8.</v>
+",
+  "
+00:10:40.450 --> 00:10:42.030
+<v Koplin, Benjamin I.>It should be minus seven, yeah.</v>
+",
+  "
+00:10:42.380 --> 00:10:42.790
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:10:42.800 --> 00:10:48.360
+<v Bourov, Anthony>So there's I I don't know why I I feel like the minus.</v>
+",
+  "
+00:10:49.720 --> 00:10:51.260
+<v Bourov, Anthony>Yeah, interesting.</v>
+",
+  "
+00:10:51.270 --> 00:10:52.230
+<v Bourov, Anthony>Why? It's short.</v>
+",
+  "
+00:10:51.340 --> 00:10:58.580
+<v Koplin, Benjamin I.>But we can get look, we can get out the all down to the milliseconds the we can extract this time from the log.</v>
+",
+  "
+00:10:52.320 --> 00:10:52.860
+<v Bourov, Anthony>Yeah, OK.</v>
+",
+  "
+00:10:57.010 --> 00:10:57.410
+<v Bourov, Anthony>Yeah, yeah.</v>
+",
+  "
+00:10:58.590 --> 00:11:03.870
+<v Koplin, Benjamin I.>So that's why I said there were three time fields, four and only three that we probably care about.</v>
+",
+  "
+00:11:01.870 --> 00:11:02.630
+<v Bourov, Anthony>All right, right.</v>
+",
+  "
+00:11:02.640 --> 00:11:02.880
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:11:02.890 --> 00:11:03.730
+<v Bourov, Anthony>No, I I get it.</v>
+",
+  "
+00:11:03.740 --> 00:11:06.100
+<v Bourov, Anthony>Yeah, I I'm curious why?</v>
+",
+  "
+00:11:06.190 --> 00:11:09.130
+<v Bourov, Anthony>Why Splunk shows it?</v>
+",
+  "
+00:11:09.140 --> 00:11:11.950
+<v Bourov, Anthony>That shows that I think what it's doing is.</v>
+",
+  "
+00:11:15.010 --> 00:11:17.390
+<v Bourov, Anthony>Yeah, I I am very curious why it chose minus 8.</v>
+",
+  "
+00:11:18.160 --> 00:11:19.580
+<v Koplin, Benjamin I.>Yeah, it's sad, right?</v>
+",
+  "
+00:11:20.440 --> 00:11:23.420
+<v Koplin, Benjamin I.>It's odd, but we don't really care about it because we can't.</v>
+",
+  "
+00:11:20.560 --> 00:11:21.160
+<v Bourov, Anthony>Yeah, I am.</v>
+",
+  "
+00:11:22.800 --> 00:11:23.950
+<v Bourov, Anthony>Yeah, makes sense.</v>
+",
+  "
+00:11:23.540 --> 00:11:25.490
+<v Koplin, Benjamin I.>I mean, you're allowed to care about it, but we don't.</v>
+",
+  "
+00:11:25.540 --> 00:11:27.970
+<v Koplin, Benjamin I.>We don't really care because we've got the time stamp.</v>
+",
+  "
+00:11:26.370 --> 00:11:27.180
+<v Bourov, Anthony>OK, alright.</v>
+",
+  "
+00:11:27.190 --> 00:11:34.610
+<v Bourov, Anthony>As long as you, as long as you're OK with, as long as you're OK with the discrepancy, it sounds like it sounds like something that can be fixed, but it's weird.</v>
+",
+  "
+00:11:34.140 --> 00:11:34.360
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:11:35.690 --> 00:11:36.000
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:11:36.010 --> 00:11:38.240
+<v Koplin, Benjamin I.>So then the here's the two other time fields.</v>
+",
+  "
+00:11:38.250 --> 00:11:41.760
+<v Koplin, Benjamin I.>So there is always, there is always a.</v>
+",
+  "
+00:11:41.930 --> 00:11:42.850
+<v Koplin, Benjamin I.>Let me take out the.</v>
+",
+  "
+00:11:44.840 --> 00:11:45.850
+<v Koplin, Benjamin I.>OK. Yeah.</v>
+",
+  "
+00:11:45.940 --> 00:11:46.890
+<v Koplin, Benjamin I.>Oh, wait, no. Here.</v>
+",
+  "
+00:11:46.900 --> 00:11:49.000
+<v Koplin, Benjamin I.>I'm gonna get rid of this so I can show you those log.</v>
+",
+  "
+00:11:50.920 --> 00:11:52.450
+<v Koplin, Benjamin I.>I wanna do just the.</v>
+",
+  "
+00:11:53.020 --> 00:11:55.210
+<v Koplin, Benjamin I.>So we're we're also pulling out of the.</v>
+",
+  "
+00:11:56.550 --> 00:12:09.180
+<v Koplin, Benjamin I.>Logs the patch activation time, so there's always a gateway service log entry that has the text packed patch activation time in it and we are pulling that out.</v>
+",
+  "
+00:12:07.770 --> 00:12:08.020
+<v Bourov, Anthony>Mm-hmm.</v>
+",
+  "
+00:12:09.190 --> 00:12:16.400
+<v Koplin, Benjamin I.>It's we're pulling that patch activation timeout and we are like adding it to every single entry.</v>
+",
+  "
+00:12:16.850 --> 00:12:21.640
+<v Koplin, Benjamin I.>We're also doing the first connection time, so there is a gateway service.</v>
+",
+  "
+00:12:17.120 --> 00:12:17.380
+<v Bourov, Anthony>OK.</v>
+",
+  "
+00:12:20.310 --> 00:12:20.490
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:12:21.650 --> 00:12:23.040
+<v Koplin, Benjamin I.>First connection log entry.</v>
+",
+  "
+00:12:23.050 --> 00:12:28.070
+<v Koplin, Benjamin I.>We're pulling that timestamp out and saying that's the first connection time, so here.</v>
+",
+  "
+00:12:25.390 --> 00:12:27.370
+<v Bourov, Anthony>Umm, right.</v>
+",
+  "
+00:12:27.720 --> 00:12:28.290
+<v Bourov, Anthony>That makes sense.</v>
+",
+  "
+00:12:28.440 --> 00:12:30.620
+<v Koplin, Benjamin I.>Then you've explained this before, Anthony, but.</v>
+",
+  "
+00:12:32.540 --> 00:12:38.480
+<v Koplin, Benjamin I.>The patch activation time for this enrollment is 2 minutes prior to the first connection time.</v>
+",
+  "
+00:12:39.120 --> 00:12:40.210
+<v Bourov, Anthony>Yeah, and that's.</v>
+",
+  "
+00:12:39.430 --> 00:12:41.820
+<v Koplin, Benjamin I.>Patch activation means, yeah.</v>
+",
+  "
+00:12:41.830 --> 00:12:42.920
+<v Koplin, Benjamin I.>Can you walk us through that again?</v>
+",
+  "
+00:12:43.260 --> 00:12:51.360
+<v Bourov, Anthony>A patch activation is when somebody puts the patch on their body and they think presses the button, which basically wakes up the patch and starts the recording process.</v>
+",
+  "
+00:12:52.060 --> 00:12:52.320
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:12:53.330 --> 00:13:03.980
+<v Bourov, Anthony>And then after that the batch starts to communicate with the gateway and the gateway and then the gateway will connect and then the Gateway will will connect up to us.</v>
+",
+  "
+00:13:03.990 --> 00:13:09.960
+<v Bourov, Anthony>So that difference could be significantly larger, but usually it's but an ideal circumstance.</v>
+",
+  "
+00:13:07.600 --> 00:13:07.910
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:13:09.970 --> 00:13:11.940
+<v Bourov, Anthony>I think it's that's about right.</v>
+",
+  "
+00:13:11.950 --> 00:13:12.840
+<v Bourov, Anthony>Let's say pretty quick.</v>
+",
+  "
+00:13:13.750 --> 00:13:14.030
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:13:15.060 --> 00:13:15.460
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:13:15.680 --> 00:13:16.050
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:13:16.060 --> 00:13:17.870
+<v Koplin, Benjamin I.>So then here, then, then, then.</v>
+",
+  "
+00:13:17.920 --> 00:13:18.470
+<v Koplin, Benjamin I.>OK, perfect.</v>
+",
+  "
+00:13:18.480 --> 00:13:28.820
+<v Koplin, Benjamin I.>So if we understand that we're also pulling, we've got a whole bunch of just different regular expression functions that we're using to create these classifiers.</v>
+",
+  "
+00:13:28.830 --> 00:13:34.570
+<v Koplin, Benjamin I.>So there's so and let me tell you what, like the the high level classification we're doing.</v>
+",
+  "
+00:13:29.500 --> 00:13:29.760
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:13:34.580 --> 00:13:43.210
+<v Koplin, Benjamin I.>So what we're trying to do is build like a, umm, a a narrative of the cycle of communications.</v>
+",
+  "
+00:13:43.220 --> 00:14:01.790
+<v Koplin, Benjamin I.>That lawyers understand by taking the that by by classifying the UM the the messages as either in incoming or outgoing and incoming here means incoming to the server, even though they're all server messages.</v>
+",
+  "
+00:13:58.040 --> 00:13:58.220
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:14:01.800 --> 00:14:10.010
+<v Koplin, Benjamin I.>What we're doing is we're saying, OK, this in the real world, we would perceive this as a message coming in and then outgoing means.</v>
+",
+  "
+00:14:02.620 --> 00:14:02.930
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:14:12.680 --> 00:14:21.590
+<v Koplin, Benjamin I.>That the server like the server is sending something back out to the gateway OK and then we'll call something server if it is.</v>
+",
+  "
+00:14:17.930 --> 00:14:18.070
+<v Bourov, Anthony>Now.</v>
+",
+  "
+00:14:21.980 --> 00:14:30.680
+<v Koplin, Benjamin I.>If it reflects something happening only on the server, umm and and like and so we we came up with the following.</v>
+",
+  "
+00:14:26.080 --> 00:14:26.360
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:14:30.690 --> 00:14:55.230
+<v Koplin, Benjamin I.>Basically what we did is we just created a little regular expression and and and used it as a filter to see like what remained as we went and so the way we would just starting with the first connection we would say, OK, well this is if if it's if the if the if the log has a connection reason.</v>
+",
+  "
+00:14:39.260 --> 00:14:39.580
+<v Bourov, Anthony>Right.</v>
+",
+  "
+00:14:55.540 --> 00:15:06.130
+<v Koplin, Benjamin I.>So in this down here, whenever we see connection reason, the connection reason value that follows the connection reason Key, we're going to say this is an outgoing meaning.</v>
+",
+  "
+00:14:55.910 --> 00:14:57.780
+<v Bourov, Anthony>Mm-hmm. Yeah.</v>
+",
+  "
+00:15:07.980 --> 00:15:09.680
+<v Koplin, Benjamin I.>Coming out, going out from the patch.</v>
+",
+  "
+00:15:10.390 --> 00:15:10.570
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:15:10.510 --> 00:15:15.080
+<v Koplin, Benjamin I.>Umm, first connection from the patch, right?</v>
+",
+  "
+00:15:15.090 --> 00:15:18.430
+<v Koplin, Benjamin I.>It's it's saying it's a connection reason from the gateway.</v>
+",
+  "
+00:15:15.770 --> 00:15:16.200
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:15:16.270 --> 00:15:19.070
+<v Bourov, Anthony>Or from the gateway action from the Patch gateway, yeah.</v>
+",
+  "
+00:15:18.440 --> 00:15:19.480
+<v Koplin, Benjamin I.>Yeah, sorry from the gateway.</v>
+",
+  "
+00:15:20.540 --> 00:15:21.030
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:15:21.040 --> 00:15:31.600
+<v Koplin, Benjamin I.>And then here we'll say, OK, this is now incoming to the server and it is the because it has parsed first patch status log.</v>
+",
+  "
+00:15:26.780 --> 00:15:26.960
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:15:31.870 --> 00:15:35.380
+<v Koplin, Benjamin I.>We're saying this is the message coming in to the server.</v>
+",
+  "
+00:15:35.390 --> 00:15:39.740
+<v Koplin, Benjamin I.>It is the first status log coming in that's a fair way to say that.</v>
+",
+  "
+00:15:41.220 --> 00:15:43.030
+<v Bourov, Anthony>Yeah, I mean.</v>
+",
+  "
+00:15:45.150 --> 00:15:47.060
+<v Bourov, Anthony>Everything I I I guess I mean it.</v>
+",
+  "
+00:15:48.310 --> 00:15:58.700
+<v Bourov, Anthony>I I'm I'm a little skeptical about what we mean by incoming about outgoing because where the events are, they're all they're still in.</v>
+",
+  "
+00:15:58.750 --> 00:16:00.580
+<v Bourov, Anthony>It's an incoming connection, right?</v>
+",
+  "
+00:15:59.500 --> 00:16:00.570
+<v Koplin, Benjamin I.>They're all incoming.</v>
+",
+  "
+00:16:00.790 --> 00:16:03.340
+<v Bourov, Anthony>Yeah, they're all incoming per say but but but it.</v>
+",
+  "
+00:16:01.080 --> 00:16:02.620
+<v Koplin, Benjamin I.>Yeah, yeah.</v>
+",
+  "
+00:16:03.350 --> 00:16:28.110
+<v Bourov, Anthony>But if it helps kind of show what what's coming, I guess if you're saying like data, I think it's more like OK, data coming from the patch from the Patch Gateway and they're going to the Patch gateway or something like, I don't know, because in this case again this is still if it's coming from the page gateway then again this is like status log handling is again incoming from the patch gateway, right. So.</v>
+",
+  "
+00:16:15.030 --> 00:16:15.330
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:16:16.110 --> 00:16:16.730
+<v Koplin, Benjamin I.>OK. OK.</v>
+",
+  "
+00:16:27.900 --> 00:16:28.300
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:16:30.210 --> 00:16:35.230
+<v Bourov, Anthony>So that's again, it depends on the story you're trying to tell and what you're trying to do with it, but.</v>
+",
+  "
+00:16:35.180 --> 00:16:44.890
+<v Koplin, Benjamin I.>Well, maybe we should say what you're saying is, if it's gateway service, we should just call everything incoming cause we we're we're giving it more meaning like the.</v>
+",
+  "
+00:16:43.950 --> 00:16:47.320
+<v Bourov, Anthony>No, they're still there are two different things than the gateway service.</v>
+",
+  "
+00:16:47.370 --> 00:16:53.540
+<v Bourov, Anthony>Gateway service has incoming except for when it's sending out patch commands.</v>
+",
+  "
+00:16:50.370 --> 00:16:50.630
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:16:53.550 --> 00:16:54.380
+<v Bourov, Anthony>Those are outgoing.</v>
+",
+  "
+00:16:55.570 --> 00:16:56.750
+<v Koplin, Benjamin I.>That you know what?</v>
+",
+  "
+00:16:56.760 --> 00:16:58.120
+<v Koplin, Benjamin I.>Then I think outgoing.</v>
+",
+  "
+00:16:56.840 --> 00:17:01.190
+<v Bourov, Anthony>So when it's sending the bat itself for everything else is.</v>
+",
+  "
+00:17:01.260 --> 00:17:04.200
+<v Bourov, Anthony>So there's basically kind of three things that that can happen.</v>
+",
+  "
+00:17:04.210 --> 00:17:09.620
+<v Bourov, Anthony>There's like gateway service incoming that's receiving data from the gateway from the Patch Gateway.</v>
+",
+  "
+00:17:11.740 --> 00:17:15.150
+<v Bourov, Anthony>Processing data is pretty much what happens.</v>
+",
+  "
+00:17:12.080 --> 00:17:12.320
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:17:15.160 --> 00:17:24.920
+<v Bourov, Anthony>Besides all that, like processing patch commands, processing transmissions, posting transmissions, all that is happening on our back end, that's not going through the gateway again.</v>
+",
+  "
+00:17:16.840 --> 00:17:17.030
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:17:25.330 --> 00:17:29.580
+<v Bourov, Anthony>And then outgoing is when we're sending patch commands back to the gateway, right?</v>
+",
+  "
+00:17:25.390 --> 00:17:25.610
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:17:29.590 --> 00:17:35.750
+<v Bourov, Anthony>That, to me, would that, to me, would be a little bit closer to an explanation for what?</v>
+",
+  "
+00:17:35.760 --> 00:17:39.800
+<v Bourov, Anthony>What's you know the from a, you know, communication flow point of view.</v>
+",
+  "
+00:17:40.470 --> 00:17:42.570
+<v Koplin, Benjamin I.>OK, OK.</v>
+",
+  "
+00:17:42.580 --> 00:17:54.680
+<v Koplin, Benjamin I.>So then I think what I hear you saying is we should call like the first connection we should call all these like first connection and heartbeat transmissions, just call them incoming because they're incoming from the gateway.</v>
+",
+  "
+00:17:53.250 --> 00:17:54.220
+<v Bourov, Anthony>Yeah, I think so.</v>
+",
+  "
+00:17:54.230 --> 00:17:57.150
+<v Bourov, Anthony>There in the yeah, they're incoming data from the gateway, right?</v>
+",
+  "
+00:17:57.660 --> 00:17:58.040
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:17:58.010 --> 00:17:59.420
+<v Bourov, Anthony>They're the gateway.</v>
+",
+  "
+00:17:58.080 --> 00:17:59.000
+<v Koplin, Benjamin I.>OK. So.</v>
+",
+  "
+00:17:59.430 --> 00:18:02.670
+<v Bourov, Anthony>Initiates the connection and it sends us this information.</v>
+",
+  "
+00:18:04.540 --> 00:18:08.770
+<v Koplin, Benjamin I.>So then the way we would read this is we got incoming is the first connection right?</v>
+",
+  "
+00:18:05.060 --> 00:18:05.410
+<v Bourov, Anthony>And where?</v>
+",
+  "
+00:18:08.780 --> 00:18:13.830
+<v Koplin, Benjamin I.>Incoming the first status log and and then right after that we got.</v>
+",
+  "
+00:18:09.030 --> 00:18:11.150
+<v Bourov, Anthony>Hmm yeah.</v>
+",
+  "
+00:18:13.900 --> 00:18:16.440
+<v Koplin, Benjamin I.>This is 1/2 an hour later incoming on a heartbeat.</v>
+",
+  "
+00:18:17.090 --> 00:18:17.930
+<v Bourov, Anthony>Yeah, exactly.</v>
+",
+  "
+00:18:17.840 --> 00:18:19.480
+<v Koplin, Benjamin I.>What we what we are?</v>
+",
+  "
+00:18:20.850 --> 00:18:22.020
+<v Koplin, Benjamin I.>Umm, what?</v>
+",
+  "
+00:18:22.030 --> 00:18:27.630
+<v Koplin, Benjamin I.>We think we can and we can do like a running list for verification of the patch.</v>
+",
+  "
+00:18:27.820 --> 00:18:35.280
+<v Koplin, Benjamin I.>The events that the that the patch has sent back the patch commands that the patch.</v>
+",
+  "
+00:18:29.740 --> 00:18:30.060
+<v Bourov, Anthony>Mm-hmm.</v>
+",
+  "
+00:18:35.350 --> 00:18:39.280
+<v Koplin, Benjamin I.>So we're calling events we're we're calling those patch commands run.</v>
+",
+  "
+00:18:39.670 --> 00:18:41.680
+<v Koplin, Benjamin I.>So when it shows up again right?</v>
+",
+  "
+00:18:40.220 --> 00:18:40.480
+<v Bourov, Anthony>OK.</v>
+",
+  "
+00:18:41.690 --> 00:18:48.060
+<v Koplin, Benjamin I.>Like when the patch sends another incoming heartbeat, we're saying, OK, it ran 5 patch commands right.</v>
+",
+  "
+00:18:43.830 --> 00:18:44.030
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:18:48.030 --> 00:18:48.970
+<v Bourov, Anthony>Yeah, sure.</v>
+",
+  "
+00:18:48.940 --> 00:18:59.230
+<v Koplin, Benjamin I.>And the reason we want that is because it just for just, so you know like we can see not just how many it ran but how many the server sent as well.</v>
+",
+  "
+00:18:59.520 --> 00:18:59.740
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:18:59.520 --> 00:19:01.110
+<v Koplin, Benjamin I.>And we wanna see if there's always.</v>
+",
+  "
+00:19:01.120 --> 00:19:04.000
+<v Koplin, Benjamin I.>If they're always perfectly lining up, you know.</v>
+",
+  "
+00:19:03.690 --> 00:19:04.160
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:19:04.170 --> 00:19:10.940
+<v Bourov, Anthony>So what you you would wanna be careful is events is not only patch commands though button press events will also count.</v>
+",
+  "
+00:19:08.640 --> 00:19:09.530
+<v Koplin, Benjamin I.>Oh, OK.</v>
+",
+  "
+00:19:10.950 --> 00:19:14.110
+<v Bourov, Anthony>So if somebody pressed a button that will also count as an event.</v>
+",
+  "
+00:19:14.910 --> 00:19:15.520
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:19:15.390 --> 00:19:20.400
+<v Bourov, Anthony>Uh, baseline transmission, I think baseline transmission is also an event, right.</v>
+",
+  "
+00:19:15.710 --> 00:19:15.960
+<v Koplin, Benjamin I.>How?</v>
+",
+  "
+00:19:15.970 --> 00:19:17.610
+<v Koplin, Benjamin I.>What will the connection reason be?</v>
+",
+  "
+00:19:20.850 --> 00:19:22.940
+<v Bourov, Anthony>So you'll see baseline transmission come in.</v>
+",
+  "
+00:19:21.310 --> 00:19:21.990
+<v Koplin, Benjamin I.>And.</v>
+",
+  "
+00:19:22.990 --> 00:19:24.900
+<v Bourov, Anthony>I think that will also be counted as an event.</v>
+",
+  "
+00:19:25.860 --> 00:19:26.820
+<v Koplin, Benjamin I.>Baseline.</v>
+",
+  "
+00:19:30.060 --> 00:19:30.300
+<v Koplin, Benjamin I.>Hmm.</v>
+",
+  "
+00:19:31.400 --> 00:19:33.530
+<v Koplin, Benjamin I.>Well, we may be filtering that out.</v>
+",
+  "
+00:19:31.670 --> 00:19:31.990
+<v Bourov, Anthony>Trying to.</v>
+",
+  "
+00:19:33.540 --> 00:19:33.750
+<v Koplin, Benjamin I.>What?</v>
+",
+  "
+00:19:33.760 --> 00:19:34.150
+<v Koplin, Benjamin I.>What is?</v>
+",
+  "
+00:19:34.160 --> 00:19:36.610
+<v Koplin, Benjamin I.>What is the connection reason for a button push?</v>
+",
+  "
+00:19:36.960 --> 00:19:38.840
+<v Koplin, Benjamin I.>It's is it heartbeat or something else?</v>
+",
+  "
+00:19:37.750 --> 00:19:38.060
+<v Bourov, Anthony>Uh.</v>
+",
+  "
+00:19:41.150 --> 00:19:42.100
+<v Bourov, Anthony>That's a great question.</v>
+",
+  "
+00:19:42.110 --> 00:19:45.990
+<v Bourov, Anthony>Let me see what I what I have for let me find you a list of connection reasons.</v>
+",
+  "
+00:19:47.000 --> 00:19:47.340
+<v Koplin, Benjamin I.>Perfect.</v>
+",
+  "
+00:19:56.560 --> 00:19:56.760
+<v Bourov, Anthony>Right.</v>
+",
+  "
+00:20:06.580 --> 00:20:09.200
+<v Bourov, Anthony>Uh, it is.</v>
+",
+  "
+00:20:12.580 --> 00:20:14.450
+<v Bourov, Anthony>And this is, you know, I'm.</v>
+",
+  "
+00:20:14.460 --> 00:20:14.730
+<v Bourov, Anthony>I'm.</v>
+",
+  "
+00:20:14.740 --> 00:20:15.810
+<v Bourov, Anthony>I'm gonna paste this.</v>
+",
+  "
+00:20:16.620 --> 00:20:18.200
+<v Bourov, Anthony>OK, where do I get the chat window?</v>
+",
+  "
+00:20:31.910 --> 00:20:32.210
+<v Bourov, Anthony>Check.</v>
+",
+  "
+00:20:38.010 --> 00:20:39.750
+<v Bourov, Anthony>And Penna literally pasting.</v>
+",
+  "
+00:20:39.760 --> 00:20:40.170
+<v Bourov, Anthony>Uh.</v>
+",
+  "
+00:20:40.220 --> 00:20:43.970
+<v Bourov, Anthony>A list of all the connection reasons from the from source code.</v>
+",
+  "
+00:20:42.320 --> 00:20:47.720
+<v Koplin, Benjamin I.>Here's what we see for this one, we have first connection, heartbeat and new event data.</v>
+",
+  "
+00:20:48.740 --> 00:20:49.250
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:20:49.260 --> 00:20:55.790
+<v Bourov, Anthony>So I think new event data could be is is very likely to be what comes up when it's a button press.</v>
+",
+  "
+00:20:56.650 --> 00:20:56.900
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:20:58.330 --> 00:21:00.000
+<v Bourov, Anthony>Or user request.</v>
+",
+  "
+00:21:01.030 --> 00:21:01.920
+<v Bourov, Anthony>That's a good question.</v>
+",
+  "
+00:21:02.410 --> 00:21:05.040
+<v Bourov, Anthony>I we because we don't really do anything with these.</v>
+",
+  "
+00:21:05.050 --> 00:21:08.310
+<v Bourov, Anthony>I don't know off the top of my head what the connection reasons are.</v>
+",
+  "
+00:21:07.370 --> 00:21:07.630
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:21:12.100 --> 00:21:12.430
+<v Bourov, Anthony>See if.</v>
+",
+  "
+00:21:12.330 --> 00:21:13.280
+<v Koplin, Benjamin I.>That's also fine.</v>
+",
+  "
+00:21:14.500 --> 00:21:15.420
+<v Bourov, Anthony>Yeah, that's.</v>
+",
+  "
+00:21:14.690 --> 00:21:21.280
+<v Koplin, Benjamin I.>That's kind of one thing that we're we're wondering is is how do we see the button presses because we know that this.</v>
+",
+  "
+00:21:22.010 --> 00:21:24.660
+<v Bourov, Anthony>And the button presses can still come in.</v>
+",
+  "
+00:21:27.610 --> 00:21:28.640
+<v Koplin, Benjamin I.>Well, this one.</v>
+",
+  "
+00:21:28.010 --> 00:21:28.210
+<v Bourov, Anthony>Right.</v>
+",
+  "
+00:21:28.710 --> 00:21:28.900
+<v Koplin, Benjamin I.>I.</v>
+",
+  "
+00:21:28.910 --> 00:21:30.060
+<v Koplin, Benjamin I.>OK, I'll tell you.</v>
+",
+  "
+00:21:30.070 --> 00:21:30.700
+<v Koplin, Benjamin I.>There's Anthony.</v>
+",
+  "
+00:21:31.250 --> 00:21:33.130
+<v Koplin, Benjamin I.>This one knew event data can't be.</v>
+",
+  "
+00:21:31.600 --> 00:21:31.820
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:21:31.830 --> 00:21:34.100
+<v Bourov, Anthony>And your new event data is patient sugar.</v>
+",
+  "
+00:21:35.200 --> 00:21:41.380
+<v Koplin, Benjamin I.>Well, then, that's interesting, cause Roswell this patient died on the 14th of October and we see new event data.</v>
+",
+  "
+00:21:41.800 --> 00:21:42.690
+<v Koplin, Benjamin I.>So this may be like.</v>
+",
+  "
+00:21:42.030 --> 00:21:43.840
+<v Bourov, Anthony>Or that somebody pressed the button, right?</v>
+",
+  "
+00:21:43.850 --> 00:21:46.850
+<v Bourov, Anthony>Somebody must have been fidgeting with the device, right?</v>
+",
+  "
+00:21:46.860 --> 00:21:47.430
+<v Bourov, Anthony>That's fine.</v>
+",
+  "
+00:21:47.440 --> 00:21:50.290
+<v Bourov, Anthony>Like they may have pressed the button after they took the device off.</v>
+",
+  "
+00:21:50.550 --> 00:21:51.040
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:21:51.110 --> 00:21:51.920
+<v Koplin, Benjamin I.>Yeah. Yep.</v>
+",
+  "
+00:21:52.000 --> 00:21:53.860
+<v Koplin, Benjamin I.>Yep, that that actually makes sense.</v>
+",
+  "
+00:21:53.870 --> 00:21:56.390
+<v Koplin, Benjamin I.>That's very morbid, OK.</v>
+",
+  "
+00:21:55.940 --> 00:21:56.640
+<v Bourov, Anthony>It is but.</v>
+",
+  "
+00:21:58.370 --> 00:22:00.650
+<v Koplin, Benjamin I.>Alright, OK.</v>
+",
+  "
+00:22:00.660 --> 00:22:07.350
+<v Koplin, Benjamin I.>So we're incoming first status log and OK, so whenever the.</v>
+",
+  "
+00:22:09.060 --> 00:22:24.120
+<v Koplin, Benjamin I.>OK, so whenever the gateway sends a message that says created analysis to request, we're just calling that incoming analysis request, but it's very it's always preceded or there's always a heartbeat within milliseconds.</v>
+",
+  "
+00:22:19.840 --> 00:22:20.120
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:22:24.130 --> 00:22:26.870
+<v Koplin, Benjamin I.>There's a heart incoming heartbeat log for the connection.</v>
+",
+  "
+00:22:26.470 --> 00:22:26.690
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:22:26.880 --> 00:22:28.590
+<v Koplin, Benjamin I.>Reason being heartbeat and now what?</v>
+",
+  "
+00:22:28.610 --> 00:22:29.550
+<v Koplin, Benjamin I.>Button presses.</v>
+",
+  "
+00:22:29.620 --> 00:22:31.290
+<v Koplin, Benjamin I.>This may be different, but.</v>
+",
+  "
+00:22:31.290 --> 00:22:34.920
+<v Bourov, Anthony>Yeah, there will that that may still be there, but that's different right?</v>
+",
+  "
+00:22:34.930 --> 00:22:37.400
+<v Bourov, Anthony>For button presses you get basically what a button press.</v>
+",
+  "
+00:22:35.430 --> 00:22:35.720
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:22:37.410 --> 00:22:40.640
+<v Bourov, Anthony>You also get a transmission in addition to all that.</v>
+",
+  "
+00:22:39.740 --> 00:22:40.010
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:22:42.980 --> 00:22:44.980
+<v Koplin, Benjamin I.>And then what we're doing is we are.</v>
+",
+  "
+00:22:46.620 --> 00:22:51.970
+<v Koplin, Benjamin I.>Next, like so, the way we think of it is the analysis request comes in.</v>
+",
+  "
+00:22:51.980 --> 00:22:56.730
+<v Koplin, Benjamin I.>The server starts creating the processing the patch commands.</v>
+",
+  "
+00:22:56.980 --> 00:23:00.870
+<v Koplin, Benjamin I.>So like we're saying, OK, there's a patch commands processing.</v>
+",
+  "
+00:22:57.410 --> 00:22:57.680
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:23:01.120 --> 00:23:04.560
+<v Koplin, Benjamin I.>We have extracted the analysis request here.</v>
+",
+  "
+00:23:04.180 --> 00:23:04.370
+<v Bourov, Anthony>Mm-hmm.</v>
+",
+  "
+00:23:04.570 --> 00:23:07.680
+<v Koplin, Benjamin I.>We see the patch commands being actually created.</v>
+",
+  "
+00:23:08.060 --> 00:23:50.460
+<v Koplin, Benjamin I.>The reason why we're even interested in these is because then we can see the type of patch command and we can see when, when, what part of the ECG, regardless of the time of the communication we can derive from the pages of the in the patch command where the server thought this might be happening here and when we can because we can then tie everything back to the transmission forward to the transmission, we can actually regardless of the log times we can say OK this event happened at this point in the wear and that point in.</v>
+",
+  "
+00:23:14.770 --> 00:23:15.850
+<v Bourov, Anthony>Yes, correct.</v>
+",
+  "
+00:23:28.250 --> 00:23:28.460
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:23:31.250 --> 00:23:31.410
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:23:38.890 --> 00:23:39.170
+<v Bourov, Anthony>Right.</v>
+",
+  "
+00:23:49.410 --> 00:23:49.620
+<v Bourov, Anthony>Mm-hmm.</v>
+",
+  "
+00:23:50.500 --> 00:23:59.980
+<v Koplin, Benjamin I.>The where is this far from patch activation and so we know exactly the date and time down to the millisecond of when that heart event happened.</v>
+",
+  "
+00:24:00.760 --> 00:24:01.080
+<v Bourov, Anthony>Right.</v>
+",
+  "
+00:24:01.720 --> 00:24:01.980
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:24:02.820 --> 00:24:05.390
+<v Koplin, Benjamin I.>So we can see the patch commands being created.</v>
+",
+  "
+00:24:05.400 --> 00:24:06.370
+<v Koplin, Benjamin I.>They're not submitted.</v>
+",
+  "
+00:24:06.560 --> 00:24:28.900
+<v Koplin, Benjamin I.>Then we see we're we're we're calling out the patch commands processing and completing just because we don't know because we're only remember like we're we're at the can we even figure out how to read these stage we don't know whether we'll see like latency and we I doubt it but we might see latency and how long it takes to process patch commands.</v>
+",
+  "
+00:24:20.920 --> 00:24:21.300
+<v Bourov, Anthony>Yeah, yeah.</v>
+",
+  "
+00:24:29.470 --> 00:24:30.460
+<v Koplin, Benjamin I.>You know, maybe.</v>
+",
+  "
+00:24:29.690 --> 00:24:33.980
+<v Bourov, Anthony>It it can, it can happen in, in, in under certain gifts circumstances.</v>
+",
+  "
+00:24:31.620 --> 00:24:32.580
+<v Koplin, Benjamin I.>Yeah, it can happen.</v>
+",
+  "
+00:24:34.410 --> 00:24:40.380
+<v Koplin, Benjamin I.>And then we see the OK, this is where the outgoing starts to make a more of a difference.</v>
+",
+  "
+00:24:39.470 --> 00:24:39.630
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:24:40.390 --> 00:24:42.060
+<v Koplin, Benjamin I.>Like here, we're we're calling.</v>
+",
+  "
+00:24:42.270 --> 00:25:07.150
+<v Koplin, Benjamin I.>Anytime we see the run Patch classifier server message, we're saying that we're calling that it is an outgoing commit outgoing request from the server to run the patch classifiers right we're we're extracting the patch command ID's so that we can umm so that we can use them to tie everything together later.</v>
+",
+  "
+00:24:52.390 --> 00:24:52.650
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:24:54.520 --> 00:24:54.740
+<v Bourov, Anthony>Yep.</v>
+",
+  "
+00:24:57.380 --> 00:24:57.540
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:25:03.490 --> 00:25:04.850
+<v Bourov, Anthony>Yeah, it's like.</v>
+",
+  "
+00:25:09.230 --> 00:25:15.660
+<v Koplin, Benjamin I.>And then and then, this just happens to be another incoming message and then.</v>
+",
+  "
+00:25:15.710 --> 00:25:16.000
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:25:16.010 --> 00:25:26.940
+<v Koplin, Benjamin I.>So then whenever we see an event data message handler saying I received an event, we're saying that's an incoming.</v>
+",
+  "
+00:25:23.410 --> 00:25:24.880
+<v Bourov, Anthony>Yeah, that's an incoming message.</v>
+",
+  "
+00:25:24.890 --> 00:25:25.980
+<v Bourov, Anthony>That's an incoming right?</v>
+",
+  "
+00:25:25.990 --> 00:25:27.070
+<v Bourov, Anthony>I don't think that's out.</v>
+",
+  "
+00:25:27.170 --> 00:25:28.000
+<v Bourov, Anthony>That's an incoming.</v>
+",
+  "
+00:25:28.010 --> 00:25:30.940
+<v Bourov, Anthony>That's the gateways patch gateway telling us.</v>
+",
+  "
+00:25:31.510 --> 00:25:32.730
+<v Bourov, Anthony>Here's the classifier result.</v>
+",
+  "
+00:25:33.180 --> 00:25:35.700
+<v Koplin, Benjamin I.>OK, well, here, let me show you this cause we called.</v>
+",
+  "
+00:25:37.760 --> 00:25:43.840
+<v Koplin, Benjamin I.>We have another thing that we called and maybe like so, OK here, here's an example.</v>
+",
+  "
+00:25:43.850 --> 00:25:44.100
+<v Koplin, Benjamin I.>One.</v>
+",
+  "
+00:25:44.830 --> 00:25:45.260
+<v Koplin, Benjamin I.>Wait.</v>
+",
+  "
+00:25:45.270 --> 00:25:47.330
+<v Koplin, Benjamin I.>Received class.</v>
+",
+  "
+00:25:45.980 --> 00:25:48.540
+<v Bourov, Anthony>Acknowledge round patch classifier is incoming.</v>
+",
+  "
+00:25:48.550 --> 00:25:49.040
+<v Bourov, Anthony>That's right.</v>
+",
+  "
+00:25:50.150 --> 00:25:50.530
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:25:50.540 --> 00:25:58.810
+<v Koplin, Benjamin I.>And so there's, and this may be one of those things that's like a a, a distinction without a difference or it may be meaningful.</v>
+",
+  "
+00:25:52.390 --> 00:25:53.440
+<v Bourov, Anthony>So that's good.</v>
+",
+  "
+00:25:59.780 --> 00:26:05.790
+<v Koplin, Benjamin I.>We're calling just in terms of like building a timeline we call the.</v>
+",
+  "
+00:26:07.420 --> 00:26:08.930
+<v Koplin, Benjamin I.>Run patch classifier?</v>
+",
+  "
+00:26:08.940 --> 00:26:09.570
+<v Koplin, Benjamin I.>No, I'm sorry.</v>
+",
+  "
+00:26:09.880 --> 00:26:14.040
+<v Koplin, Benjamin I.>We called the outgoing the event data message handler.</v>
+",
+  "
+00:26:14.740 --> 00:26:15.140
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:26:15.420 --> 00:26:26.210
+<v Koplin, Benjamin I.>Receive event outgoing we call the routing service provider event transmission received incoming to the server, receive classifier results is that do you?</v>
+",
+  "
+00:26:26.220 --> 00:26:27.280
+<v Koplin, Benjamin I.>Would you say like that?</v>
+",
+  "
+00:26:27.290 --> 00:26:27.990
+<v Koplin, Benjamin I.>Doesn't actually.</v>
+",
+  "
+00:26:28.210 --> 00:26:31.270
+<v Koplin, Benjamin I.>Here's here's these ones aren't actually these are related.</v>
+",
+  "
+00:26:31.280 --> 00:26:32.710
+<v Koplin, Benjamin I.>So this one we would say, OK.</v>
+",
+  "
+00:26:32.200 --> 00:26:38.990
+<v Bourov, Anthony>Yeah, the IT doesn't make sense to me because the they're they're basically coming from both the gate.</v>
+",
+  "
+00:26:39.000 --> 00:26:45.310
+<v Bourov, Anthony>So they're both from gateway service source type and they're basically 2 logs that are Daisy chained together, right?</v>
+",
+  "
+00:26:45.500 --> 00:26:48.870
+<v Bourov, Anthony>So they're both incoming, and let's say that there was.</v>
+",
+  "
+00:26:45.680 --> 00:26:48.470
+<v Koplin, Benjamin I.>OK, they're both income.</v>
+",
+  "
+00:26:48.880 --> 00:26:50.430
+<v Bourov, Anthony>Yeah, the difference is 1.</v>
+",
+  "
+00:26:50.440 --> 00:26:55.390
+<v Bourov, Anthony>If it was negative, if the event status was negative, then the second one wouldn't happen, right?</v>
+",
+  "
+00:26:55.720 --> 00:26:56.770
+<v Bourov, Anthony>But it's still incoming.</v>
+",
+  "
+00:26:56.680 --> 00:26:57.590
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:26:57.690 --> 00:26:58.450
+<v Koplin, Benjamin I.>OK, OK.</v>
+",
+  "
+00:26:58.460 --> 00:26:59.850
+<v Koplin, Benjamin I.>I'm gonna change this thing coming.</v>
+",
+  "
+00:27:00.180 --> 00:27:03.670
+<v Koplin, Benjamin I.>OK, so the and and maybe most.</v>
+",
+  "
+00:27:00.480 --> 00:27:05.970
+<v Bourov, Anthony>Yeah, it's because this tells us whether we have a positive or a negative event status, right?</v>
+",
+  "
+00:27:06.420 --> 00:27:11.660
+<v Bourov, Anthony>The one above and then one after that tells us OK, now we actually have a transmission related to that.</v>
+",
+  "
+00:27:06.500 --> 00:27:08.120
+<v Koplin, Benjamin I.>OK so.</v>
+",
+  "
+00:27:11.980 --> 00:27:12.900
+<v Koplin, Benjamin I.>OK, OK.</v>
+",
+  "
+00:27:15.060 --> 00:27:15.550
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:27:15.640 --> 00:27:17.420
+<v Koplin, Benjamin I.>That makes sense. So.</v>
+",
+  "
+00:27:20.390 --> 00:27:20.880
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:27:20.950 --> 00:27:21.190
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:27:21.200 --> 00:27:33.440
+<v Koplin, Benjamin I.>That makes sense, especially because when you look at the the time stamps that we can extract from here, this one shows October 4th at 75647 and we would have called it outgoing.</v>
+",
+  "
+00:27:33.630 --> 00:27:43.080
+<v Koplin, Benjamin I.>But the incoming here is October 4th at 756, Fortnite Transmission received date.</v>
+",
+  "
+00:27:41.890 --> 00:27:42.190
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:27:43.160 --> 00:27:49.150
+<v Koplin, Benjamin I.>Ohh, that's why we called this incoming is because it has a transmission received date on it as well, but we'll we can call him both.</v>
+",
+  "
+00:27:50.460 --> 00:27:51.030
+<v Koplin, Benjamin I.>I mean, what?</v>
+",
+  "
+00:27:51.040 --> 00:27:55.360
+<v Koplin, Benjamin I.>What we're trying to do here, as is.</v>
+",
+  "
+00:27:55.930 --> 00:28:06.050
+<v Koplin, Benjamin I.>OK, let me tell you what we're hoping distinguishing between these things could help us show if we call them both incoming, even though we can Daisy chain them together.</v>
+",
+  "
+00:28:07.090 --> 00:28:17.110
+<v Koplin, Benjamin I.>What we what, we wondered is is there anything like if we ever see a gap now this is .02 millisecond gap here, right?</v>
+",
+  "
+00:28:17.170 --> 00:28:19.250
+<v Bourov, Anthony>No, you're not going to see a gap because this is.</v>
+",
+  "
+00:28:17.560 --> 00:28:22.540
+<v Koplin, Benjamin I.>But if we ever see an extended gap between them, does that make, could we say like that's?</v>
+",
+  "
+00:28:21.330 --> 00:28:24.660
+<v Bourov, Anthony>No, you're not gonna see a gap because these are happening in the same.</v>
+",
+  "
+00:28:25.290 --> 00:28:29.010
+<v Bourov, Anthony>These are happening in the same transactions transactions, so you will not see a gap here.</v>
+",
+  "
+00:28:27.640 --> 00:28:30.260
+<v Koplin, Benjamin I.>So they are OK. OK, OK.</v>
+",
+  "
+00:28:30.270 --> 00:28:31.630
+<v Koplin, Benjamin I.>Alright, we'll call them both in coming to.</v>
+",
+  "
+00:28:30.790 --> 00:28:33.730
+<v Bourov, Anthony>We're just capturing two different aspects of the same event.</v>
+",
+  "
+00:28:34.470 --> 00:28:35.170
+<v Koplin, Benjamin I.>OK, OK.</v>
+",
+  "
+00:28:36.470 --> 00:28:36.850
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:28:37.490 --> 00:28:38.680
+<v Koplin, Benjamin I.>Alright then.</v>
+",
+  "
+00:28:38.750 --> 00:28:43.020
+<v Koplin, Benjamin I.>So if we take this, this is where the days Daisy chain.</v>
+",
+  "
+00:28:45.580 --> 00:28:46.810
+<v Koplin, Benjamin I.>They seem to me OK.</v>
+",
+  "
+00:28:46.820 --> 00:28:54.430
+<v Koplin, Benjamin I.>So then then we start to do like server only processes and this is 1 where we.</v>
+",
+  "
+00:28:54.950 --> 00:29:03.090
+<v Koplin, Benjamin I.>So if if we see transmission filtered, then we're we're just gonna say this is the server filtering the transmission.</v>
+",
+  "
+00:29:04.260 --> 00:29:04.750
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:29:05.710 --> 00:29:22.010
+<v Koplin, Benjamin I.>And we're gonna do the same when it comes to like what we're gonna do is we're thinking we're gonna extract these events, cause it'll say like, what is the difference between the ECG, GDL results processor and the transmission filter event?</v>
+",
+  "
+00:29:22.020 --> 00:29:23.670
+<v Koplin, Benjamin I.>Cause there are two different event types.</v>
+",
+  "
+00:29:23.680 --> 00:29:40.030
+<v Koplin, Benjamin I.>What we the reason why this is null is cause we wanted to say is OK this is the server polling completed processing algorithm and then this one we would say this is the server filtering the so right?</v>
+",
+  "
+00:29:38.700 --> 00:29:38.900
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:29:40.070 --> 00:29:43.540
+<v Koplin, Benjamin I.>So I assumed like this one always seems to proceed.</v>
+",
+  "
+00:29:41.990 --> 00:29:49.450
+<v Bourov, Anthony>Yeah, I mean, every pretty much anything that happens not on the gateway service is going to be on this is is gonna be on, this is gonna be server, right?</v>
+",
+  "
+00:29:49.730 --> 00:29:50.340
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:29:50.420 --> 00:29:52.480
+<v Koplin, Benjamin I.>But can we call so like this one?</v>
+",
+  "
+00:29:52.810 --> 00:30:00.200
+<v Koplin, Benjamin I.>This transmission filter seems to always happen before algorithm processing completed it's.</v>
+",
+  "
+00:29:59.760 --> 00:30:00.790
+<v Bourov, Anthony>Yeah, those are those.</v>
+",
+  "
+00:30:00.800 --> 00:30:02.850
+<v Bourov, Anthony>Again, those are those are the.</v>
+",
+  "
+00:30:02.860 --> 00:30:06.400
+<v Bourov, Anthony>Those are two, two aspects of the same log message, right?</v>
+",
+  "
+00:30:06.350 --> 00:30:07.190
+<v Koplin, Benjamin I.>OK, OK.</v>
+",
+  "
+00:30:07.260 --> 00:30:07.390
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:30:07.290 --> 00:30:13.000
+<v Bourov, Anthony>That that's kind of the challenge because I because the two different log lines have two different pieces of information.</v>
+",
+  "
+00:30:13.010 --> 00:30:20.750
+<v Bourov, Anthony>I kind of included both of them, but you really aren't any, but they really are just two log lines that happen all these together.</v>
+",
+  "
+00:30:16.450 --> 00:30:16.670
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:30:20.760 --> 00:30:22.720
+<v Bourov, Anthony>You'll never get one without the other kind of.</v>
+",
+  "
+00:30:22.770 --> 00:30:23.180
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:30:23.190 --> 00:30:34.240
+<v Koplin, Benjamin I.>The significance of this one is this tells you which rules the event matched, and this one tells you what that the effect of the action on the status for the event.</v>
+",
+  "
+00:30:26.940 --> 00:30:27.160
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:30:33.970 --> 00:30:36.810
+<v Bourov, Anthony>Yeah, exactly correct.</v>
+",
+  "
+00:30:34.250 --> 00:30:35.540
+<v Koplin, Benjamin I.>That's why you provided both.</v>
+",
+  "
+00:30:35.590 --> 00:30:36.000
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:30:36.040 --> 00:30:37.630
+<v Koplin, Benjamin I.>OK. OK.</v>
+",
+  "
+00:30:36.820 --> 00:30:44.880
+<v Bourov, Anthony>And again, because there could be a case where we never did filter it and the status did get sent to QAQ, then you want, then you'll only see the second part of it, right?</v>
+",
+  "
+00:30:45.330 --> 00:30:48.250
+<v Koplin, Benjamin I.>OK, OK, so here, let me show you.</v>
+",
+  "
+00:30:48.320 --> 00:31:09.880
+<v Koplin, Benjamin I.>I mean that that's can you think of, I mean just in the logs that you sent, we've got incoming first status logs, incoming analysis request, outgoing run patch classifiers acknowledging patch classifiers, creating patch commands processing and completed patch commands created with the status.</v>
+",
+  "
+00:31:09.950 --> 00:31:12.480
+<v Koplin, Benjamin I.>Ohh that that's the one where it's processing on.</v>
+",
+  "
+00:31:12.520 --> 00:31:12.880
+<v Koplin, Benjamin I.>I'm sorry.</v>
+",
+  "
+00:31:12.890 --> 00:31:14.000
+<v Koplin, Benjamin I.>This one's unsubmitted.</v>
+",
+  "
+00:31:14.010 --> 00:31:18.060
+<v Koplin, Benjamin I.>So Patch command we can she see the server creating the patch commands?</v>
+",
+  "
+00:31:18.270 --> 00:31:50.150
+<v Koplin, Benjamin I.>We can see the umm, the gateway sending an outgoing message to return, which I think we decided was gonna be incoming incoming to return the classifier results and then incoming where the server saying OK I did get the classifier results then we can see the server like this would be server and I DTF we can see transmission filtering algorithms running and people taking human beings doing reporting actions.</v>
+",
+  "
+00:31:18.950 --> 00:31:19.220
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:31:28.350 --> 00:31:28.470
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:31:50.160 --> 00:31:50.950
+<v Koplin, Benjamin I.>That all sounds.</v>
+",
+  "
+00:31:52.110 --> 00:31:55.500
+<v Koplin, Benjamin I.>I mean it can again, we don't have other logs right now.</v>
+",
+  "
+00:31:55.510 --> 00:32:06.900
+<v Koplin, Benjamin I.>So we don't know what other kinds of things that can be, but with this set of regular expression rules, we can apply categories to everything in what you sent us.</v>
+",
+  "
+00:31:56.160 --> 00:31:56.340
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:32:05.710 --> 00:32:08.310
+<v Bourov, Anthony>Yeah, yeah, correct.</v>
+",
+  "
+00:32:07.720 --> 00:32:09.040
+<v Koplin, Benjamin I.>That sounds about right, right?</v>
+",
+  "
+00:32:08.320 --> 00:32:10.190
+<v Bourov, Anthony>And and I think that sounds about right.</v>
+",
+  "
+00:32:10.200 --> 00:32:23.410
+<v Bourov, Anthony>And I think that pretty much every you know there will be what what you might see is you might see cases where there was something missing out of these like for example they gave me never connected to us or the cell phone network was bad or something like that.</v>
+",
+  "
+00:32:18.220 --> 00:32:19.830
+<v Koplin, Benjamin I.>Mm-hmm. Sure.</v>
+",
+  "
+00:32:23.420 --> 00:32:25.050
+<v Bourov, Anthony>But you're not gonna that.</v>
+",
+  "
+00:32:25.100 --> 00:32:33.030
+<v Bourov, Anthony>I this this particular patch was a good example because it did seem to cover all the, you know, all the standard conditions.</v>
+",
+  "
+00:32:34.180 --> 00:32:34.890
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:32:35.020 --> 00:32:35.770
+<v Koplin, Benjamin I.>Yeah, right.</v>
+",
+  "
+00:32:35.780 --> 00:32:36.450
+<v Koplin, Benjamin I.>Exactly.</v>
+",
+  "
+00:32:36.820 --> 00:32:39.130
+<v Koplin, Benjamin I.>OK, so let me I'm gonna pull this up.</v>
+",
+  "
+00:32:38.420 --> 00:32:38.590
+<v Bourov, Anthony>What?</v>
+",
+  "
+00:32:39.320 --> 00:32:40.030
+<v Koplin, Benjamin I.>I'm gonna pull up.</v>
+",
+  "
+00:32:40.040 --> 00:32:44.630
+<v Koplin, Benjamin I.>This is a patient where we know we know that this patient.</v>
+",
+  "
+00:32:47.180 --> 00:32:50.900
+<v Koplin, Benjamin I.>Because we know this patient met the Max transmission limit.</v>
+",
+  "
+00:32:51.260 --> 00:32:52.630
+<v Koplin, Benjamin I.>You wanna ask you?</v>
+",
+  "
+00:32:53.080 --> 00:32:53.570
+<v Koplin, Benjamin I.>I wanna.</v>
+",
+  "
+00:32:53.580 --> 00:32:55.930
+<v Koplin, Benjamin I.>I think we can see the.</v>
+",
+  "
+00:32:57.900 --> 00:32:59.110
+<v Koplin, Benjamin I.>Umm, positive.</v>
+",
+  "
+00:33:01.610 --> 00:33:02.220
+<v Koplin, Benjamin I.>Where is it?</v>
+",
+  "
+00:33:02.270 --> 00:33:03.060
+<v Koplin, Benjamin I.>There it is. OK.</v>
+",
+  "
+00:33:04.200 --> 00:33:15.210
+<v Koplin, Benjamin I.>So it looks like on the what we would call returning classifier results and then status is skipped due to positive limit.</v>
+",
+  "
+00:33:10.160 --> 00:33:10.470
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:33:15.620 --> 00:33:25.130
+<v Koplin, Benjamin I.>Does that this, that's that we think means they they the patches OK.</v>
+",
+  "
+00:33:22.430 --> 00:33:23.160
+<v Bourov, Anthony>No, that's a.</v>
+",
+  "
+00:33:23.170 --> 00:33:24.550
+<v Bourov, Anthony>That's a little different.</v>
+",
+  "
+00:33:24.930 --> 00:33:26.370
+<v Bourov, Anthony>So just to be very clear.</v>
+",
+  "
+00:33:27.130 --> 00:33:27.350
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:33:29.380 --> 00:33:31.270
+<v Bourov, Anthony>Then let me see I have.</v>
+",
+  "
+00:33:35.860 --> 00:33:36.450
+<v Bourov, Anthony>Let me see.</v>
+",
+  "
+00:33:36.460 --> 00:33:39.630
+<v Bourov, Anthony>I think I have this that I have this open.</v>
+",
+  "
+00:33:46.070 --> 00:33:49.250
+<v Bourov, Anthony>This is so this is the event status, right?</v>
+",
+  "
+00:33:50.670 --> 00:33:54.900
+<v Koplin, Benjamin I.>Umm, yes, yes, yes, yeah.</v>
+",
+  "
+00:34:01.790 --> 00:34:06.100
+<v Bourov, Anthony>Let me see if I can find a blurb about these.</v>
+",
+  "
+00:34:06.110 --> 00:34:06.760
+<v Bourov, Anthony>Give me a minute.</v>
+",
+  "
+00:34:07.210 --> 00:34:11.430
+<v Bourov, Anthony>I I it is different, it is not the same thing that.</v>
+",
+  "
+00:34:07.390 --> 00:34:07.590
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:34:13.940 --> 00:34:16.540
+<v Bourov, Anthony>What I I think it is not what you're describing.</v>
+",
+  "
+00:34:17.250 --> 00:34:17.550
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:34:20.670 --> 00:34:26.660
+<v Bourov, Anthony>Unfortunately, I don't have a quick way quick reference document for it. Uh.</v>
+",
+  "
+00:34:29.140 --> 00:34:29.570
+<v Bourov, Anthony>What?</v>
+",
+  "
+00:34:29.880 --> 00:34:31.820
+<v Bourov, Anthony>So there's other.</v>
+",
+  "
+00:34:32.020 --> 00:34:34.030
+<v Bourov, Anthony>So these are kind of internal statuses.</v>
+",
+  "
+00:34:34.460 --> 00:34:43.610
+<v Bourov, Anthony>Essentially, when we sending these classifiers to the patch, we are there's a little bit of additional logic that happens in the patch.</v>
+",
+  "
+00:34:34.610 --> 00:34:34.890
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:34:43.620 --> 00:34:46.800
+<v Bourov, Anthony>So let's say we sent a bunch of classifiers during a certain period.</v>
+",
+  "
+00:34:48.480 --> 00:34:53.650
+<v Bourov, Anthony>The logic is that if you get enough positives during that period, then it's gonna stop.</v>
+",
+  "
+00:34:53.660 --> 00:35:01.070
+<v Bourov, Anthony>Like let's say we send 10, let's say within the you know whatever that 30 minute period we send 10 classifiers.</v>
+",
+  "
+00:35:01.150 --> 00:35:13.080
+<v Bourov, Anthony>For this particular status that for V, there's going to be a piece of logic in the patch that says like return only the first five that were positive and skip them and skip the remaining.</v>
+",
+  "
+00:35:01.510 --> 00:35:01.760
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:35:04.250 --> 00:35:04.480
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:35:10.500 --> 00:35:10.810
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:35:13.210 --> 00:35:15.110
+<v Bourov, Anthony>So this is not a global limit.</v>
+",
+  "
+00:35:15.230 --> 00:35:17.620
+<v Bourov, Anthony>This is just kind of a local limit to.</v>
+",
+  "
+00:35:17.630 --> 00:35:19.300
+<v Bourov, Anthony>This is kind of this is the opposite.</v>
+",
+  "
+00:35:19.310 --> 00:35:22.780
+<v Bourov, Anthony>This is, to me the this is kind of to mediate the local, the global limit.</v>
+",
+  "
+00:35:23.510 --> 00:35:23.810
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:35:24.340 --> 00:35:43.270
+<v Bourov, Anthony>So that if we already got a bunch of positive events during that period, we're not gonna keep sending the like because because it's a, you know, a blind communication with a large time gap, the server sends everything it finds, but then the patch will limit what it sends back because already we have a bunch of positive events and we're going to limit it.</v>
+",
+  "
+00:35:30.270 --> 00:35:30.830
+<v Koplin, Benjamin I.>Right. OK.</v>
+",
+  "
+00:35:43.810 --> 00:35:44.120
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:35:45.360 --> 00:35:46.480
+<v Koplin, Benjamin I.>I mean that makes no sense.</v>
+",
+  "
+00:35:46.490 --> 00:35:46.870
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:35:46.940 --> 00:35:49.550
+<v Koplin, Benjamin I.>It's kind of like what the human being does as well, right?</v>
+",
+  "
+00:35:49.560 --> 00:35:50.420
+<v Bourov, Anthony>Right, yeah.</v>
+",
+  "
+00:35:49.560 --> 00:35:52.990
+<v Koplin, Benjamin I.>Like a a human being's not gonna fill up a report with a bunch of.</v>
+",
+  "
+00:35:53.300 --> 00:35:56.550
+<v Koplin, Benjamin I.>The point is the signal to the doctor that this thing might be happening.</v>
+",
+  "
+00:35:56.860 --> 00:35:57.210
+<v Koplin, Benjamin I.>You don't.</v>
+",
+  "
+00:35:57.220 --> 00:35:59.010
+<v Koplin, Benjamin I.>They don't need to see every single instance.</v>
+",
+  "
+00:35:57.300 --> 00:35:58.260
+<v Bourov, Anthony>Right, exactly.</v>
+",
+  "
+00:35:58.270 --> 00:35:58.900
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:35:59.320 --> 00:36:00.340
+<v Bourov, Anthony>So it'll send the most.</v>
+",
+  "
+00:35:59.600 --> 00:36:01.610
+<v Koplin, Benjamin I.>So then I guess the question good.</v>
+",
+  "
+00:36:01.350 --> 00:36:01.930
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:36:02.350 --> 00:36:03.120
+<v Bourov, Anthony>Sorry, go ahead. Yeah.</v>
+",
+  "
+00:36:04.220 --> 00:36:09.850
+<v Koplin, Benjamin I.>So then how would we see where would we see on these logs that that the device?</v>
+",
+  "
+00:36:11.840 --> 00:36:13.200
+<v Bourov, Anthony>Reached limit.</v>
+",
+  "
+00:36:12.240 --> 00:36:13.940
+<v Koplin, Benjamin I.>Met the Max transmission limit.</v>
+",
+  "
+00:36:15.530 --> 00:36:16.740
+<v Bourov, Anthony>That's a great question.</v>
+",
+  "
+00:36:16.750 --> 00:36:19.950
+<v Bourov, Anthony>And are you wouldn't specifically see it on that log.</v>
+",
+  "
+00:36:18.610 --> 00:36:19.040
+<v Koplin, Benjamin I.>Actually.</v>
+",
+  "
+00:36:19.050 --> 00:36:19.560
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:36:19.610 --> 00:36:20.430
+<v Koplin, Benjamin I.>Thank you, Anthony.</v>
+",
+  "
+00:36:21.630 --> 00:36:22.700
+<v Koplin, Benjamin I.>That's what I said.</v>
+",
+  "
+00:36:22.890 --> 00:36:26.590
+<v Koplin, Benjamin I.>I said it wouldn't make sense that it would be in the logs. Umm.</v>
+",
+  "
+00:36:26.280 --> 00:36:33.730
+<v Bourov, Anthony>Yeah, it it's, it's more of something that just kind of it's more of something that happens and then we we just stop seeing more transmission.</v>
+",
+  "
+00:36:33.740 --> 00:36:36.040
+<v Bourov, Anthony>We just stop seeing Patch classifiers coming across.</v>
+",
+  "
+00:36:34.160 --> 00:36:34.460
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:36:36.590 --> 00:36:40.200
+<v Koplin, Benjamin I.>Right now, does that mean that we won't see?</v>
+",
+  "
+00:36:41.340 --> 00:36:41.820
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:36:41.830 --> 00:36:41.990
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:36:41.940 --> 00:36:48.250
+<v Koplin, Benjamin I.>Analysis Request like what we're calling analysis request, which is the heartbeat connection, OK.</v>
+",
+  "
+00:36:45.300 --> 00:36:47.630
+<v Bourov, Anthony>You will still see analysis request.</v>
+",
+  "
+00:36:47.680 --> 00:36:51.430
+<v Bourov, Anthony>I think what you will stop seeing is you will stop seeing patch commands coming back.</v>
+",
+  "
+00:36:51.880 --> 00:37:01.120
+<v Bourov, Anthony>Let me see if I can find a good place to there might be one more log that we could capture that that would give us that count.</v>
+",
+  "
+00:36:52.530 --> 00:36:52.810
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:37:02.080 --> 00:37:02.320
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:37:03.070 --> 00:37:04.140
+<v Bourov, Anthony>I mean, obviously you can.</v>
+",
+  "
+00:37:03.220 --> 00:37:06.460
+<v Koplin, Benjamin I.>We see there are, you know, on on your event log.</v>
+",
+  "
+00:37:04.190 --> 00:37:05.400
+<v Bourov, Anthony>You can also count.</v>
+",
+  "
+00:37:05.410 --> 00:37:07.100
+<v Bourov, Anthony>You can also count the number of events.</v>
+",
+  "
+00:37:06.500 --> 00:37:08.390
+<v Koplin, Benjamin I.>Good, right?</v>
+",
+  "
+00:37:07.110 --> 00:37:08.060
+<v Bourov, Anthony>Right. Sorry.</v>
+",
+  "
+00:37:08.190 --> 00:37:08.460
+<v Bourov, Anthony>Go ahead.</v>
+",
+  "
+00:37:08.400 --> 00:37:12.810
+<v Koplin, Benjamin I.>We can count the number of events, but then that like I think this log actually has.</v>
+",
+  "
+00:37:14.570 --> 00:37:16.720
+<v Koplin, Benjamin I.>I can't remember whether it's this log or the other one.</v>
+",
+  "
+00:37:16.730 --> 00:37:17.240
+<v Koplin, Benjamin I.>Let me see.</v>
+",
+  "
+00:37:17.250 --> 00:37:20.970
+<v Koplin, Benjamin I.>I think the one of the logs you sent has those counts.</v>
+",
+  "
+00:37:22.720 --> 00:37:23.610
+<v Koplin, Benjamin I.>Let me see here.</v>
+",
+  "
+00:37:23.620 --> 00:37:26.420
+<v Koplin, Benjamin I.>I think it's this one and.</v>
+",
+  "
+00:37:33.270 --> 00:37:34.080
+<v Koplin, Benjamin I.>Uh, let's see.</v>
+",
+  "
+00:37:37.320 --> 00:37:37.650
+<v Koplin, Benjamin I.>Raw.</v>
+",
+  "
+00:37:44.090 --> 00:37:45.000
+<v Koplin, Benjamin I.>OK, let me see.</v>
+",
+  "
+00:37:45.050 --> 00:37:45.670
+<v Koplin, Benjamin I.>I'll just run it.</v>
+",
+  "
+00:37:48.140 --> 00:37:49.210
+<v Bourov, Anthony>I'm trying to remember what.</v>
+",
+  "
+00:37:48.860 --> 00:37:49.650
+<v Koplin, Benjamin I.>Yeah, here it is.</v>
+",
+  "
+00:37:50.200 --> 00:37:52.990
+<v Koplin, Benjamin I.>Like we can see the number of.</v>
+",
+  "
+00:37:58.230 --> 00:37:59.860
+<v Koplin, Benjamin I.>Where is it triggered?</v>
+",
+  "
+00:37:59.870 --> 00:38:04.040
+<v Koplin, Benjamin I.>Events like this is got classifiers received classifiers pending.</v>
+",
+  "
+00:38:04.270 --> 00:38:07.350
+<v Koplin, Benjamin I.>So this other log you sent the gateway logs that.</v>
+",
+  "
+00:38:07.190 --> 00:38:07.520
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:38:07.530 --> 00:38:10.340
+<v Bourov, Anthony>That will also have the internal counts on the gateway.</v>
+",
+  "
+00:38:10.350 --> 00:38:11.210
+<v Bourov, Anthony>Yes, that's right.</v>
+",
+  "
+00:38:10.400 --> 00:38:10.720
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:38:11.510 --> 00:38:16.370
+<v Bourov, Anthony>We also will be able to see it on some of our uhm.</v>
+",
+  "
+00:38:26.180 --> 00:38:29.630
+<v Bourov, Anthony>Let me we should be able to see there is a log that we can see.</v>
+",
+  "
+00:38:30.750 --> 00:38:31.680
+<v Bourov, Anthony>Uh, what?</v>
+",
+  "
+00:38:31.690 --> 00:38:34.150
+<v Bourov, Anthony>The zoo system count is as well.</v>
+",
+  "
+00:38:33.780 --> 00:38:34.010
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:38:39.820 --> 00:38:41.640
+<v Koplin, Benjamin I.>Is it possible that?</v>
+",
+  "
+00:38:42.860 --> 00:38:47.220
+<v Koplin, Benjamin I.>Does anybody on the reichmuth side remember when this this?</v>
+",
+  "
+00:38:49.320 --> 00:38:51.540
+<v Koplin, Benjamin I.>Patient met the Trump Max transmission limit.</v>
+",
+  "
+00:38:53.610 --> 00:38:55.240
+<v Mejia, Roswill>Let me see if I can find that really quick.</v>
+",
+  "
+00:38:55.730 --> 00:39:01.510
+<v Koplin, Benjamin I.>Because is it possible like we see a vent data length dropping to 0?</v>
+",
+  "
+00:39:02.830 --> 00:39:05.680
+<v Koplin, Benjamin I.>Umm, I wonder if it's bad. Anthony.</v>
+",
+  "
+00:39:06.050 --> 00:39:09.150
+<v Koplin, Benjamin I.>It like when you see the event data link just drop to 0.</v>
+",
+  "
+00:39:10.160 --> 00:39:15.340
+<v Bourov, Anthony>Well, event data length is when you have any.</v>
+",
+  "
+00:39:15.530 --> 00:39:17.800
+<v Bourov, Anthony>When you actually have event data or not, right?</v>
+",
+  "
+00:39:17.810 --> 00:39:18.840
+<v Bourov, Anthony>So that's a little different.</v>
+",
+  "
+00:39:18.850 --> 00:39:20.320
+<v Bourov, Anthony>Like you could, you could also have.</v>
+",
+  "
+00:39:20.330 --> 00:39:23.520
+<v Bourov, Anthony>It could drop to zero before for different reason.</v>
+",
+  "
+00:39:23.990 --> 00:39:24.770
+<v Koplin, Benjamin I.>OK, OK.</v>
+",
+  "
+00:39:25.860 --> 00:39:30.370
+<v Bourov, Anthony>Let me add so sorry this was October 2021, right, like pull up the.</v>
+",
+  "
+00:39:29.940 --> 00:39:31.340
+<v Koplin, Benjamin I.>October 2021, yeah.</v>
+",
+  "
+00:39:44.110 --> 00:39:46.020
+<v Bourov, Anthony>So I guarantee.</v>
+",
+  "
+00:39:49.100 --> 00:39:51.350
+<v Bourov, Anthony>If we just let let me uh, I can.</v>
+",
+  "
+00:39:51.560 --> 00:39:55.850
+<v Bourov, Anthony>It'll be in the other trigger controller logs and I did not it.</v>
+",
+  "
+00:39:55.860 --> 00:39:58.760
+<v Bourov, Anthony>It's a little bit more of a umm.</v>
+",
+  "
+00:40:03.100 --> 00:40:03.770
+<v Bourov, Anthony>Let's see.</v>
+",
+  "
+00:40:03.900 --> 00:40:05.580
+<v Bourov, Anthony>I I I'll be able to find it in a bit.</v>
+",
+  "
+00:40:14.390 --> 00:40:14.610
+<v Koplin, Benjamin I.>That's.</v>
+",
+  "
+00:40:14.780 --> 00:40:19.400
+<v Bourov, Anthony>That we can extract this from, we could just laugh.</v>
+",
+  "
+00:40:19.410 --> 00:40:22.430
+<v Bourov, Anthony>I think if you count the number of positive events status.</v>
+",
+  "
+00:40:23.210 --> 00:40:23.430
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:40:24.930 --> 00:40:29.220
+<v Bourov, Anthony>You you should hit the 500 limit on those essentially.</v>
+",
+  "
+00:40:31.090 --> 00:40:31.380
+<v Koplin, Benjamin I.>Let's see.</v>
+",
+  "
+00:40:31.230 --> 00:40:35.660
+<v Bourov, Anthony>So if you if you count the number of events with status equals positive.</v>
+",
+  "
+00:40:37.540 --> 00:40:39.040
+<v Bourov, Anthony>If that's an easy enough thing to do.</v>
+",
+  "
+00:40:39.780 --> 00:40:40.000
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:40:42.100 --> 00:40:52.110
+<v Bourov, Anthony>Basically count number if you count the number of events status equals positive cases that that will that will get you the that 500 limit if it.</v>
+",
+  "
+00:40:42.380 --> 00:40:42.870
+<v Mejia, Roswill>I have the.</v>
+",
+  "
+00:40:52.160 --> 00:41:01.090
+<v Bourov, Anthony>If we hit the 500 limit, if we hit the 5000 limit on the patch commands, then essentially you just count the number of patch commands created.</v>
+",
+  "
+00:40:59.820 --> 00:41:00.150
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:41:00.160 --> 00:41:07.080
+<v Koplin, Benjamin I.>Look 505505 on the positives so that that kind of makes sense.</v>
+",
+  "
+00:41:05.300 --> 00:41:05.730
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:41:05.740 --> 00:41:13.360
+<v Bourov, Anthony>So, so somewhere around the 500 is when we kind of hit that limit, uh, I think there.</v>
+",
+  "
+00:41:15.670 --> 00:41:19.630
+<v Bourov, Anthony>There could be a reason I'm trying to remember why it would go over 500 cut.</v>
+",
+  "
+00:41:20.950 --> 00:41:21.310
+<v Bourov, Anthony>I'm.</v>
+",
+  "
+00:41:23.320 --> 00:41:26.380
+<v Koplin, Benjamin I.>Maybe the patch has to be told to stop or something.</v>
+",
+  "
+00:41:23.620 --> 00:41:23.900
+<v Bourov, Anthony>Trying to.</v>
+",
+  "
+00:41:26.550 --> 00:41:28.270
+<v Bourov, Anthony>No, it's not that there is a.</v>
+",
+  "
+00:41:30.370 --> 00:41:41.450
+<v Bourov, Anthony>There there are sometimes double counting a little bit, because what would happen is let's say we have a positive event and then the connection drops and then again we get the same event.</v>
+",
+  "
+00:41:33.620 --> 00:41:33.830
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:41:41.460 --> 00:41:53.800
+<v Bourov, Anthony>Like if I think the unique event ideas might be more if you it's an easy like you unique the other one.</v>
+",
+  "
+00:41:53.170 --> 00:41:54.470
+<v Koplin, Benjamin I.>Ohh I see yeah.</v>
+",
+  "
+00:41:56.930 --> 00:41:57.630
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:41:57.270 --> 00:41:57.780
+<v Bourov, Anthony>Absolutely.</v>
+",
+  "
+00:41:57.690 --> 00:42:03.230
+<v Koplin, Benjamin I.>So count the transmission ID associated with the status, not the log entries, yeah.</v>
+",
+  "
+00:42:00.650 --> 00:42:02.560
+<v Bourov, Anthony>Yeah, count the transmission ID.</v>
+",
+  "
+00:42:02.870 --> 00:42:04.030
+<v Bourov, Anthony>Yeah, count the trance.</v>
+",
+  "
+00:42:04.040 --> 00:42:08.750
+<v Bourov, Anthony>So essentially, if you just count the number of transmissions that are asymptomatic, then you you should.</v>
+",
+  "
+00:42:08.800 --> 00:42:11.730
+<v Bourov, Anthony>You should get a pretty exact 500 uh.</v>
+",
+  "
+00:42:12.980 --> 00:42:20.760
+<v Bourov, Anthony>There are exceptions I think, like if we had a schedule, I don't think this this device has, but if we had scheduled transmissions, you don't get counted towards that.</v>
+",
+  "
+00:42:21.510 --> 00:42:21.730
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:42:22.610 --> 00:42:28.800
+<v Bourov, Anthony>Uh, the other place where you'll see this and let me just see if I can find.</v>
+",
+  "
+00:42:43.360 --> 00:42:46.870
+<v Mejia, Roswill>I do have the Max auto trigger date if that's something that would still be helpful.</v>
+",
+  "
+00:42:45.980 --> 00:42:46.840
+<v Koplin, Benjamin I.>Yeah, when was that?</v>
+",
+  "
+00:42:47.560 --> 00:42:50.000
+<v Mejia, Roswill>It was October 5th of 2021.</v>
+",
+  "
+00:42:52.610 --> 00:42:52.930
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:42:57.930 --> 00:43:02.230
+<v Mejia, Roswill>But at least when the they notified the account of the maximum auto triggers.</v>
+",
+  "
+00:43:03.060 --> 00:43:06.180
+<v Koplin, Benjamin I.>Well, they do that in advance, right of hitting it.</v>
+",
+  "
+00:43:05.480 --> 00:43:07.020
+<v Bourov, Anthony>Yeah, they'll do that a little in advance.</v>
+",
+  "
+00:43:08.240 --> 00:43:12.470
+<v Bourov, Anthony>Uh, no, I'm actually not seeing an.</v>
+",
+  "
+00:43:14.160 --> 00:43:16.370
+<v Koplin, Benjamin I.>So, October, what did you say it was?</v>
+",
+  "
+00:43:15.460 --> 00:43:15.830
+<v Bourov, Anthony>I'm not.</v>
+",
+  "
+00:43:15.840 --> 00:43:17.810
+<v Bourov, Anthony>See, I am not seeing account.</v>
+",
+  "
+00:43:17.820 --> 00:43:19.610
+<v Bourov, Anthony>Sorry, it doesn't look like so.</v>
+",
+  "
+00:43:19.620 --> 00:43:22.050
+<v Bourov, Anthony>This is not something we're currently we're logging in.</v>
+",
+  "
+00:43:22.060 --> 00:43:25.440
+<v Bourov, Anthony>That version is we're not actually counts logging account.</v>
+",
+  "
+00:43:27.400 --> 00:43:28.270
+<v Bourov, Anthony>Started patient.</v>
+",
+  "
+00:43:27.500 --> 00:43:27.930
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:43:27.940 --> 00:43:29.300
+<v Koplin, Benjamin I.>Well, but we can count it.</v>
+",
+  "
+00:43:30.670 --> 00:43:33.770
+<v Koplin, Benjamin I.>So like we can we can count it.</v>
+",
+  "
+00:43:32.040 --> 00:43:32.220
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:43:34.500 --> 00:43:37.090
+<v Bourov, Anthony>Yeah, you can count it and I think.</v>
+",
+  "
+00:43:36.540 --> 00:43:36.740
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:43:45.260 --> 00:43:45.500
+<v Bourov, Anthony>Ah.</v>
+",
+  "
+00:43:47.470 --> 00:43:49.030
+<v Bourov, Anthony>If I want to.</v>
+",
+  "
+00:43:48.300 --> 00:43:52.160
+<v Koplin, Benjamin I.>Roswell, do you know when they actually hit the limit and not when they reached out?</v>
+",
+  "
+00:43:53.050 --> 00:44:03.990
+<v Koplin, Benjamin I.>Like does the does what they said about why they were reaching out and say when they were like when they thought that they would meet and limit.</v>
+",
+  "
+00:43:53.070 --> 00:43:53.310
+<v Mejia, Roswill>No.</v>
+",
+  "
+00:44:05.530 --> 00:44:06.620
+<v Mejia, Roswill>We don't have that information.</v>
+",
+  "
+00:44:08.460 --> 00:44:17.140
+<v Mejia, Roswill>It it just says like in the the Z ticket log it just says Max Auto triggers notified the account confirmed that new device will be overnight to the patient.</v>
+",
+  "
+00:44:17.880 --> 00:44:18.180
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:44:20.900 --> 00:44:25.320
+<v Mejia, Roswill>Let me let me do actually let me do some digging and see if I can find more information.</v>
+",
+  "
+00:44:26.090 --> 00:44:31.370
+<v Koplin, Benjamin I.>Look, look for like October 14th, October 15th.</v>
+",
+  "
+00:44:31.430 --> 00:44:33.020
+<v Koplin, Benjamin I.>See you see what you can see cause.</v>
+",
+  "
+00:44:34.900 --> 00:44:36.730
+<v Mejia, Roswill>Will the patient died on the 11th?</v>
+",
+  "
+00:44:37.160 --> 00:44:42.710
+<v Mejia, Roswill>So it would be between the 5th and and the 11th.</v>
+",
+  "
+00:44:45.020 --> 00:44:46.640
+<v Koplin, Benjamin I.>This patient died on the 11th.</v>
+",
+  "
+00:44:47.290 --> 00:44:47.410
+<v Mejia, Roswill>Yes.</v>
+",
+  "
+00:44:48.860 --> 00:44:50.670
+<v Koplin, Benjamin I.>Then why are they spending?</v>
+",
+  "
+00:44:50.880 --> 00:44:52.310
+<v Koplin, Benjamin I.>Why are their posts unless?</v>
+",
+  "
+00:44:56.010 --> 00:44:56.620
+<v Koplin, Benjamin I.>Unless the.</v>
+",
+  "
+00:44:56.110 --> 00:44:59.820
+<v Bourov, Anthony>We still get a lot of chatter on the devices after the patient dies.</v>
+",
+  "
+00:44:59.930 --> 00:45:12.660
+<v Bourov, Anthony>Just it, even if the device is leaves off or or if the device stays leads on and then they it is possible to continue getting chatter because the device doesn't know right so.</v>
+",
+  "
+00:45:00.180 --> 00:45:01.110
+<v Koplin, Benjamin I.>Oh, OK, OK.</v>
+",
+  "
+00:45:09.740 --> 00:45:10.050
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:45:13.050 --> 00:45:14.370
+<v Koplin, Benjamin I.>Hmm yeah.</v>
+",
+  "
+00:45:16.980 --> 00:45:19.110
+<v Koplin, Benjamin I.>OK, alright.</v>
+",
+  "
+00:45:19.120 --> 00:45:19.780
+<v Koplin, Benjamin I.>See see.</v>
+",
+  "
+00:45:19.130 --> 00:45:21.440
+<v Mejia, Roswill>There is a reference of artifact transmissions.</v>
+",
+  "
+00:45:22.530 --> 00:45:22.850
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:45:24.460 --> 00:45:25.320
+<v Mejia, Roswill>After the patient died.</v>
+",
+  "
+00:45:28.870 --> 00:45:34.550
+<v Koplin, Benjamin I.>OK, so all right, this OK we got we got 10 minutes left.</v>
+",
+  "
+00:45:34.560 --> 00:45:36.540
+<v Koplin, Benjamin I.>I think Anthony. Umm.</v>
+",
+  "
+00:45:38.740 --> 00:45:53.870
+<v Koplin, Benjamin I.>What we are so now we need now that we kind of can classify to to if you're comfortable with the way we're classifying the event logs that we're seeing now, we need to see.</v>
+",
+  "
+00:45:50.380 --> 00:45:50.590
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:45:56.550 --> 00:46:03.120
+<v Koplin, Benjamin I.>What other enrollments logs look like and so that we can start comparing 1 enrollment to the other.</v>
+",
+  "
+00:46:00.550 --> 00:46:00.750
+<v Bourov, Anthony>Sure.</v>
+",
+  "
+00:46:03.390 --> 00:46:06.260
+<v Koplin, Benjamin I.>So we've got a list of Roswell.</v>
+",
+  "
+00:46:06.460 --> 00:46:07.210
+<v Koplin, Benjamin I.>How many?</v>
+",
+  "
+00:46:07.630 --> 00:46:11.380
+<v Koplin, Benjamin I.>How many enrollments did the FDA ask about last summer?</v>
+",
+  "
+00:46:11.390 --> 00:46:14.080
+<v Koplin, Benjamin I.>What it was either 25 or 28, is that right?</v>
+",
+  "
+00:46:14.090 --> 00:46:14.580
+<v Koplin, Benjamin I.>Do you remember?</v>
+",
+  "
+00:46:17.350 --> 00:46:18.590
+<v Mejia, Roswill>I thought it was 14.</v>
+",
+  "
+00:46:19.130 --> 00:46:19.980
+<v Koplin, Benjamin I.>It might be 14.</v>
+",
+  "
+00:46:19.990 --> 00:46:21.110
+<v Koplin, Benjamin I.>No, no, it could be 14.</v>
+",
+  "
+00:46:20.160 --> 00:46:20.580
+<v Mejia, Roswill>OK.</v>
+",
+  "
+00:46:21.120 --> 00:46:21.780
+<v Koplin, Benjamin I.>I'm literally.</v>
+",
+  "
+00:46:21.790 --> 00:46:23.360
+<v Koplin, Benjamin I.>I have no, I can't remember at all.</v>
+",
+  "
+00:46:23.710 --> 00:46:26.660
+<v Koplin, Benjamin I.>It could be for whatever it is, is less than 30.</v>
+",
+  "
+00:46:24.340 --> 00:46:24.500
+<v Mejia, Roswill>Yeah.</v>
+",
+  "
+00:46:26.670 --> 00:46:41.770
+<v Koplin, Benjamin I.>I know that umm and Anthony between the two logs, the two the event logs and the gateway logs, it's about 27,000 records, 27 seven thousand lines of data.</v>
+",
+  "
+00:46:27.670 --> 00:46:27.910
+<v Mejia, Roswill>Umm.</v>
+",
+  "
+00:46:36.820 --> 00:46:37.070
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:46:42.200 --> 00:46:50.880
+<v Koplin, Benjamin I.>So if we get 20 times that, then we're still under hopefully like 700,000 records.</v>
+",
+  "
+00:46:42.360 --> 00:46:42.580
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:46:50.890 --> 00:47:01.930
+<v Koplin, Benjamin I.>Now I've we can handle however big you guys can send, but the that that means it shouldn't hopefully be too difficult to export and transfer.</v>
+",
+  "
+00:47:03.030 --> 00:47:03.260
+<v Bourov, Anthony>Mm-hmm.</v>
+",
+  "
+00:47:03.950 --> 00:47:05.960
+<v Koplin, Benjamin I.>But if we give you a list of.</v>
+",
+  "
+00:47:04.430 --> 00:47:07.760
+<v Bourov, Anthony>So is the gateway log useful?</v>
+",
+  "
+00:47:07.770 --> 00:47:09.080
+<v Bourov, Anthony>First of all, as one big question.</v>
+",
+  "
+00:47:09.020 --> 00:47:17.320
+<v Koplin, Benjamin I.>It is because, I mean, we're gonna have to talk to somebody, but we can see in the gateway logs things that we we can see.</v>
+",
+  "
+00:47:17.390 --> 00:47:19.300
+<v Koplin, Benjamin I.>We can see there's more in here.</v>
+",
+  "
+00:47:20.170 --> 00:47:33.350
+<v Koplin, Benjamin I.>There's some duplication in terms of, like we can see transmissions coming across like transmissions coming across that match the transmissions in the event logs.</v>
+",
+  "
+00:47:22.260 --> 00:47:22.560
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:47:26.100 --> 00:47:26.260
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:47:33.820 --> 00:47:42.590
+<v Koplin, Benjamin I.>But what we're especially interested in is like Bluetooth startup and shut down and restart and restart and restart.</v>
+",
+  "
+00:47:42.600 --> 00:47:42.800
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:47:42.600 --> 00:47:56.820
+<v Koplin, Benjamin I.>It's more like this one, where rather than pulling a lot of information out of each log, the classification matters and and it exists already because like the types are actually descriptive.</v>
+",
+  "
+00:47:57.650 --> 00:47:58.150
+<v Koplin, Benjamin I.>Umm.</v>
+",
+  "
+00:47:58.010 --> 00:47:58.310
+<v Bourov, Anthony>Right.</v>
+",
+  "
+00:47:58.380 --> 00:48:01.370
+<v Koplin, Benjamin I.>And so yeah, we think that they're helpful.</v>
+",
+  "
+00:48:02.610 --> 00:48:17.170
+<v Koplin, Benjamin I.>We just don't know exactly how to interpret every aspect of them, and so we're we're working with like who, who, who would you recommend on the and just trying like, who's the Anthony for the gateway logs?</v>
+",
+  "
+00:48:15.770 --> 00:48:16.660
+<v Bourov, Anthony>On the on the.</v>
+",
+  "
+00:48:19.340 --> 00:48:21.340
+<v Bourov, Anthony>Ooh, that's a great question.</v>
+",
+  "
+00:48:30.280 --> 00:48:32.340
+<v Bourov, Anthony>I need to I need a minute to kind of come up with.</v>
+",
+  "
+00:48:35.480 --> 00:48:36.470
+<v Bourov, Anthony>Good answer there.</v>
+",
+  "
+00:48:36.480 --> 00:48:40.350
+<v Bourov, Anthony>I mean, it'll be in that like, you know.</v>
+",
+  "
+00:48:44.410 --> 00:48:47.160
+<v Bourov, Anthony>And it's all under, you know David Nazzaro.</v>
+",
+  "
+00:48:47.170 --> 00:48:52.630
+<v Bourov, Anthony>Then it goes like, I mean like it's like it.</v>
+",
+  "
+00:48:52.640 --> 00:48:53.930
+<v Bourov, Anthony>It just depends on.</v>
+",
+  "
+00:48:54.540 --> 00:48:55.040
+<v Bourov, Anthony>Let me think.</v>
+",
+  "
+00:48:58.490 --> 00:49:03.310
+<v Mejia, Roswill>Ohh, I found the actual date for the transfer the CAP.</v>
+",
+  "
+00:49:00.030 --> 00:49:00.190
+<v Bourov, Anthony>You.</v>
+",
+  "
+00:49:04.710 --> 00:49:06.460
+<v Koplin, Benjamin I.>Ohh what he got?</v>
+",
+  "
+00:49:06.320 --> 00:49:17.360
+<v Mejia, Roswill>Yeah, I'm looking at the like investigation report and it says review of Gateway service confirmed the 500th transmission was capped on 04 Oct of the 4th of October.</v>
+",
+  "
+00:49:18.470 --> 00:49:19.520
+<v Koplin, Benjamin I.>That's so interesting. OK.</v>
+",
+  "
+00:49:24.150 --> 00:49:25.210
+<v Bourov, Anthony>Yeah, I'm wondering.</v>
+",
+  "
+00:49:25.220 --> 00:49:25.480
+<v Bourov, Anthony>Uh.</v>
+",
+  "
+00:49:25.490 --> 00:49:27.590
+<v Bourov, Anthony>Well, Sasha Sterling is 1.</v>
+",
+  "
+00:49:27.600 --> 00:49:28.540
+<v Bourov, Anthony>He's the director.</v>
+",
+  "
+00:49:28.550 --> 00:49:33.210
+<v Bourov, Anthony>Software engineering on PD side, but he'll probably recommend you to someone else.</v>
+",
+  "
+00:49:30.870 --> 00:49:31.170
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:49:36.400 --> 00:49:39.520
+<v Bourov, Anthony>Ryan W Ryan Leslie is another one.</v>
+",
+  "
+00:49:39.680 --> 00:49:40.910
+<v Bourov, Anthony>I mean it depends right?</v>
+",
+  "
+00:49:40.920 --> 00:49:42.810
+<v Bourov, Anthony>Like they they pretty much any one.</v>
+",
+  "
+00:49:43.000 --> 00:49:54.290
+<v Bourov, Anthony>There's quite a lot of people in that org that can help, so I don't know whether they want like, whether it would fall more on the software side or like Ryan Wesley would be more like the systems electrical engineering part.</v>
+",
+  "
+00:49:54.910 --> 00:49:55.130
+<v Koplin, Benjamin I.>Mm-hmm.</v>
+",
+  "
+00:49:55.160 --> 00:50:05.330
+<v Bourov, Anthony>So I would ask them and see whether they want to do it or whether they recommend someone in their team to coordinate with you. Uh.</v>
+",
+  "
+00:50:04.620 --> 00:50:04.900
+<v Koplin, Benjamin I.>Alright.</v>
+",
+  "
+00:50:07.070 --> 00:50:07.530
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:50:07.880 --> 00:50:09.350
+<v Koplin, Benjamin I.>So we'll we'll reach out to.</v>
+",
+  "
+00:50:11.460 --> 00:50:12.890
+<v Bourov, Anthony>And then uh.</v>
+",
+  "
+00:50:17.610 --> 00:50:17.980
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:50:17.990 --> 00:50:20.360
+<v Bourov, Anthony>Oh, by the way, one more thing.</v>
+",
+  "
+00:50:20.370 --> 00:50:27.810
+<v Bourov, Anthony>When you were doing the event counts, we should exclude any time when the event type is patient triggered, so that order.</v>
+",
+  "
+00:50:26.910 --> 00:50:27.230
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:50:27.930 --> 00:50:35.850
+<v Bourov, Anthony>So that's probably one reason why you got more than 500 is because you really what we're looking for is event types that are not patient triggered, right?</v>
+",
+  "
+00:50:36.950 --> 00:50:37.330
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:50:38.960 --> 00:50:39.380
+<v Bourov, Anthony>So.</v>
+",
+  "
+00:50:42.650 --> 00:50:43.200
+<v Koplin, Benjamin I.>Let me see here.</v>
+",
+  "
+00:50:44.980 --> 00:50:50.630
+<v Bourov, Anthony>And gets us to like 501, but right and wondering if.</v>
+",
+  "
+00:51:07.290 --> 00:51:10.500
+<v Bourov, Anthony>Well, yeah, and the other one is and then you get the one of them is baseline.</v>
+",
+  "
+00:51:10.510 --> 00:51:12.180
+<v Bourov, Anthony>So you also exclude baseline, right?</v>
+",
+  "
+00:51:12.190 --> 00:51:23.280
+<v Bourov, Anthony>So essentially, if you exclude baseline then you get and you exclude patient triggered then you get an exact 500 match and that last event whatever was the last event received.</v>
+",
+  "
+00:51:12.680 --> 00:51:12.900
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:51:23.290 --> 00:51:26.430
+<v Bourov, Anthony>That's the last, you know, that's the last thing we received.</v>
+",
+  "
+00:51:26.440 --> 00:51:30.940
+<v Bourov, Anthony>So that would be considered a end of, you know, last communication for that patch.</v>
+",
+  "
+00:51:30.780 --> 00:51:31.020
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:51:33.580 --> 00:51:34.460
+<v Koplin, Benjamin I.>Here's the baseline.</v>
+",
+  "
+00:51:34.470 --> 00:51:36.210
+<v Koplin, Benjamin I.>Here's the patient triggered. OK.</v>
+",
+  "
+00:51:36.090 --> 00:51:36.410
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:51:36.420 --> 00:51:38.650
+<v Bourov, Anthony>So there's your five extras that we counted.</v>
+",
+  "
+00:51:38.110 --> 00:51:39.220
+<v Koplin, Benjamin I.>Yeah, that's the five extra.</v>
+",
+  "
+00:51:39.230 --> 00:51:39.650
+<v Koplin, Benjamin I.>That's right.</v>
+",
+  "
+00:51:39.810 --> 00:51:40.160
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:51:40.170 --> 00:51:44.040
+<v Bourov, Anthony>So because this this device had clean communication, so we didn't have any duplicates.</v>
+",
+  "
+00:51:40.780 --> 00:51:41.240
+<v Koplin, Benjamin I.>And then maybe.</v>
+",
+  "
+00:51:44.050 --> 00:51:45.860
+<v Bourov, Anthony>I was when I was looking at it, so this was like.</v>
+",
+  "
+00:51:45.700 --> 00:51:45.920
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:51:48.990 --> 00:51:52.400
+<v Bourov, Anthony>So that's that's gonna be exactly how you count the.</v>
+",
+  "
+00:51:52.410 --> 00:51:56.700
+<v Bourov, Anthony>The other one you can count is the number of actual transmission ID transmission received events.</v>
+",
+  "
+00:51:56.710 --> 00:52:05.150
+<v Bourov, Anthony>Those will also, but the transmission received event, but even those well, you'll have to still exclude the unconditional and baseline.</v>
+",
+  "
+00:52:05.160 --> 00:52:06.760
+<v Bourov, Anthony>So this is probably the best way to do it.</v>
+",
+  "
+00:52:06.770 --> 00:52:11.370
+<v Bourov, Anthony>You just you just do this and you exclude patient triggered and you exclude baseline.</v>
+",
+  "
+00:52:12.200 --> 00:52:12.480
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:52:13.830 --> 00:52:15.370
+<v Bourov, Anthony>And everything else is a batch command.</v>
+",
+  "
+00:52:16.540 --> 00:52:16.800
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:52:18.950 --> 00:52:21.230
+<v Bourov, Anthony>And that's also the way the patch works as well.</v>
+",
+  "
+00:52:21.240 --> 00:52:23.550
+<v Bourov, Anthony>The budget is based on that event type.</v>
+",
+  "
+00:52:24.630 --> 00:52:25.160
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:52:25.570 --> 00:52:27.140
+<v Koplin, Benjamin I.>OK, alright.</v>
+",
+  "
+00:52:27.150 --> 00:52:28.560
+<v Koplin, Benjamin I.>So we'll get you the list.</v>
+",
+  "
+00:52:28.910 --> 00:52:34.620
+<v Koplin, Benjamin I.>Do your serial numbers always start with A and have a string of digits OK.</v>
+",
+  "
+00:52:33.190 --> 00:52:39.020
+<v Bourov, Anthony>Yes, all auto trigger AT serial numbers will start with a the A.</v>
+",
+  "
+00:52:39.030 --> 00:52:41.320
+<v Bourov, Anthony>The first letter has to do with the device type.</v>
+",
+  "
+00:52:41.330 --> 00:52:46.060
+<v Bourov, Anthony>So since these are all at devices, they will all start with a like.</v>
+",
+  "
+00:52:41.840 --> 00:52:42.060
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:52:45.280 --> 00:52:45.560
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:52:46.150 --> 00:52:49.300
+<v Bourov, Anthony>Later, when we're at MCT, that'll have a different letter and so on.</v>
+",
+  "
+00:52:49.310 --> 00:52:52.050
+<v Bourov, Anthony>But so that should be a pretty straightforward.</v>
+",
+  "
+00:52:49.360 --> 00:52:49.580
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:52:52.060 --> 00:52:57.240
+<v Bourov, Anthony>It would be helpful if you have I guess no. That's fine.</v>
+",
+  "
+00:52:57.330 --> 00:52:59.690
+<v Bourov, Anthony>I was just if you just getting me in the list of serial number that's fine.</v>
+",
+  "
+00:52:59.700 --> 00:53:03.530
+<v Bourov, Anthony>I was just like for me, I I essentially for me to pull the data out and need two things.</v>
+",
+  "
+00:53:03.540 --> 00:53:06.900
+<v Bourov, Anthony>I need the serial numbers and I need a.</v>
+",
+  "
+00:53:09.100 --> 00:53:10.260
+<v Bourov, Anthony>So what do you call it?</v>
+",
+  "
+00:53:10.270 --> 00:53:14.600
+<v Bourov, Anthony>List of and I need to start and end date for each one right?</v>
+",
+  "
+00:53:14.540 --> 00:53:16.120
+<v Koplin, Benjamin I.>We can get those, we can get those.</v>
+",
+  "
+00:53:14.610 --> 00:53:18.610
+<v Bourov, Anthony>Because I'm trying to, but that that that would.</v>
+",
+  "
+00:53:18.040 --> 00:53:25.840
+<v Koplin, Benjamin I.>And started an end date means start of prescribed enrollment and end of prescribed enrollment or is it the actual wear time start and end?</v>
+",
+  "
+00:53:26.810 --> 00:53:28.980
+<v Bourov, Anthony>Yeah, that would be the you kind of weird time.</v>
+",
+  "
+00:53:29.030 --> 00:53:42.640
+<v Bourov, Anthony>I think I'll pull those out of the database instead, since it's not it, because I'll I'll probably use like a fuzzy rule of like so that the like for you know, patch activation time minus something.</v>
+",
+  "
+00:53:37.160 --> 00:53:38.950
+<v Koplin, Benjamin I.>Yeah, like beginning of the month end of the month.</v>
+",
+  "
+00:53:42.650 --> 00:53:56.320
+<v Bourov, Anthony>Plus, you know and then plus 30 days for, you know, picking up everything that happened afterwards and and the last question is for the gateway logs, do you want them in the same Excel file or split up like I did last time?</v>
+",
+  "
+00:53:43.050 --> 00:53:43.270
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:53:47.760 --> 00:53:48.080
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:53:56.820 --> 00:53:59.440
+<v Koplin, Benjamin I.>Split up his fine if it's easier for you.</v>
+",
+  "
+00:53:56.850 --> 00:53:57.410
+<v Bourov, Anthony>Does it matter?</v>
+",
+  "
+00:53:59.520 --> 00:54:05.090
+<v Koplin, Benjamin I.>If it's not easier for you, then put them in the same, but I because I think I don't know that the source type.</v>
+",
+  "
+00:54:02.720 --> 00:54:02.920
+<v Bourov, Anthony>OK.</v>
+",
+  "
+00:54:05.100 --> 00:54:13.970
+<v Koplin, Benjamin I.>I mean, if you were gonna put him in the same file, the same CSV, then you'd have to put a source type that distinguishes or have it be null.</v>
+",
+  "
+00:54:14.080 --> 00:54:17.920
+<v Koplin, Benjamin I.>You know, so like, if just if if separate is easier for you.</v>
+",
+  "
+00:54:15.440 --> 00:54:16.430
+<v Bourov, Anthony>Yeah, yeah.</v>
+",
+  "
+00:54:16.500 --> 00:54:19.690
+<v Bourov, Anthony>I think I'll put it in a different I think it might be easier to put in a different one.</v>
+",
+  "
+00:54:19.700 --> 00:54:26.060
+<v Bourov, Anthony>It's less queries for me to put it in the same one, but the size of the data might caused problems so.</v>
+",
+  "
+00:54:26.230 --> 00:54:26.470
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:54:27.600 --> 00:54:31.370
+<v Koplin, Benjamin I.>And if you need to split the data up according to whatever logic.</v>
+",
+  "
+00:54:30.640 --> 00:54:31.790
+<v Bourov, Anthony>No, I think it's fine.</v>
+",
+  "
+00:54:31.800 --> 00:54:32.390
+<v Bourov, Anthony>I think I'm.</v>
+",
+  "
+00:54:32.460 --> 00:54:34.890
+<v Bourov, Anthony>I think one can handle it.</v>
+",
+  "
+00:54:35.550 --> 00:54:35.810
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:54:38.070 --> 00:54:38.910
+<v Koplin, Benjamin I.>Alright, cool.</v>
+",
+  "
+00:54:41.150 --> 00:54:51.680
+<v Koplin, Benjamin I.>I think we're kind of done bugging you until we see like, what, when you hear from us next after we get the data is we're gonna share some rather than classification and observation.</v>
+",
+  "
+00:54:46.710 --> 00:54:47.010
+<v Bourov, Anthony>Uh-huh.</v>
+",
+  "
+00:54:51.690 --> 00:54:57.050
+<v Koplin, Benjamin I.>We're gonna share some like analysis with you and do the same kind of thing where we, you know.</v>
+",
+  "
+00:54:54.790 --> 00:54:55.640
+<v Bourov, Anthony>Right, right.</v>
+",
+  "
+00:54:55.650 --> 00:55:03.070
+<v Bourov, Anthony>And then if you seek, if you hit questions on some of the devices like is, is your conclusion right and all that I can help with that.</v>
+",
+  "
+00:55:02.080 --> 00:55:02.960
+<v Koplin, Benjamin I.>Yeah, that's right.</v>
+",
+  "
+00:55:03.870 --> 00:55:05.260
+<v Bourov, Anthony>OK. Sounds good.</v>
+",
+  "
+00:55:05.270 --> 00:55:10.510
+<v Bourov, Anthony>Yeah, it'll take a little bit of time to gather the data, but I'll do it.</v>
+",
+  "
+00:55:10.720 --> 00:55:12.290
+<v Bourov, Anthony>I I might actually wait. I'll see.</v>
+",
+  "
+00:55:12.300 --> 00:55:14.210
+<v Bourov, Anthony>I might have somebody help me out with it.</v>
+",
+  "
+00:55:14.280 --> 00:55:17.250
+<v Bourov, Anthony>It's just at that point is just grabbing data out of Splunk.</v>
+",
+  "
+00:55:17.590 --> 00:55:17.810
+<v Koplin, Benjamin I.>Yep.</v>
+",
+  "
+00:55:17.660 --> 00:55:19.540
+<v Bourov, Anthony>It doesn't help that Splunk is extremely slow.</v>
+",
+  "
+00:55:20.270 --> 00:55:20.780
+<v Koplin, Benjamin I.>Yeah.</v>
+",
+  "
+00:55:20.850 --> 00:55:22.110
+<v Koplin, Benjamin I.>Can I ask you a question before we go?</v>
+",
+  "
+00:55:22.840 --> 00:55:22.990
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:55:23.660 --> 00:55:28.130
+<v Koplin, Benjamin I.>Are we doing something different than the company already does in terms of analyzing the logs?</v>
+",
+  "
+00:55:28.620 --> 00:55:31.360
+<v Koplin, Benjamin I.>I mean, it's just I know that every company has different questions.</v>
+",
+  "
+00:55:31.370 --> 00:55:33.010
+<v Koplin, Benjamin I.>They ask of their own data, right?</v>
+",
+  "
+00:55:33.020 --> 00:55:45.670
+<v Koplin, Benjamin I.>And and we often find that and when we come in that we're always dealing with Someone Like You, who's really, really, really knowledgeable about how to how to read and understand a certain set of data.</v>
+",
+  "
+00:55:44.920 --> 00:55:45.260
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:55:46.950 --> 00:55:56.430
+<v Koplin, Benjamin I.>But in in the end, what we're really trying to do is create a Business Report that reports on a different kind of thing.</v>
+",
+  "
+00:55:54.890 --> 00:55:55.330
+<v Bourov, Anthony>Right.</v>
+",
+  "
+00:55:56.440 --> 00:56:12.660
+<v Koplin, Benjamin I.>The business is doing, then they tend to find reportable, you know like worthy of putting the resources into reporting are we are are we, does it seem like we're asking questions that haven't been asked before or cause no?</v>
+",
+  "
+00:56:01.960 --> 00:56:02.360
+<v Bourov, Anthony>Yeah, yeah.</v>
+",
+  "
+00:56:11.540 --> 00:56:14.200
+<v Bourov, Anthony>No, no there.</v>
+",
+  "
+00:56:13.750 --> 00:56:18.540
+<v Koplin, Benjamin I.>Does it seem like we are closer to being able to answer questions that haven't been answered before?</v>
+",
+  "
+00:56:21.190 --> 00:56:38.900
+<v Bourov, Anthony>I mean, I would be surprised if these exact kind of operations have like like all all the data that I'm getting you is very much in line with the type of query, the type of queries we do to investigate these issues.</v>
+",
+  "
+00:56:39.230 --> 00:56:50.100
+<v Bourov, Anthony>Now that I'm not the one who personally does that, but like you said, you got a lot of this data from like Mark, he would have been working with people in PD and you know he's probably 10 times more skilled with Splunk than I am.</v>
+",
+  "
+00:56:50.110 --> 00:56:52.700
+<v Bourov, Anthony>So like all of this.</v>
+",
+  "
+00:56:54.650 --> 00:56:58.030
+<v Bourov, Anthony>Everything you're doing is pretty much stopped.</v>
+",
+  "
+00:56:58.040 --> 00:56:58.780
+<v Bourov, Anthony>That was done.</v>
+",
+  "
+00:56:58.910 --> 00:57:01.280
+<v Bourov, Anthony>That being said again.</v>
+",
+  "
+00:57:04.120 --> 00:57:07.050
+<v Bourov, Anthony>Every time somebody does it, they're doing it with a specific purpose, right?</v>
+",
+  "
+00:57:07.060 --> 00:57:12.390
+<v Bourov, Anthony>So this is not something we do on a regular basis or across all devices.</v>
+",
+  "
+00:57:07.430 --> 00:57:08.050
+<v Koplin, Benjamin I.>Yeah, right.</v>
+",
+  "
+00:57:12.400 --> 00:57:14.710
+<v Bourov, Anthony>This is something that somebody does.</v>
+",
+  "
+00:57:12.820 --> 00:57:15.010
+<v Koplin, Benjamin I.>And that's I think maybe the yeah.</v>
+",
+  "
+00:57:15.180 --> 00:57:29.160
+<v Bourov, Anthony>When when they receive a query on the device and they do a deep dive and I will say there's only a few people in the company that know know the data well enough to be able to do it to that level of extent, but there's definitely enough people that know this.</v>
+",
+  "
+00:57:29.690 --> 00:57:34.800
+<v Koplin, Benjamin I.>And so we're trying to do across I think some of you said there is kind of resonates with me.</v>
+",
+  "
+00:57:34.810 --> 00:57:45.660
+<v Koplin, Benjamin I.>What we're trying to do is and analysis across all the devices, and the only person we've seen so far who's done something like that is mark, Umm and but.</v>
+",
+  "
+00:57:44.550 --> 00:57:44.730
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:57:45.670 --> 00:57:49.050
+<v Koplin, Benjamin I.>But when we look at marks analysis, I wonder what you think of this.</v>
+",
+  "
+00:57:49.060 --> 00:58:06.400
+<v Koplin, Benjamin I.>When we look at marks analysis, he's definitely doing an analysis across devices, but he he of necessity for his analysis, he flattens a lot of the distinctions he he like, doesn't he doesn't need.</v>
+",
+  "
+00:57:54.180 --> 00:57:54.380
+<v Bourov, Anthony>Umm.</v>
+",
+  "
+00:58:06.570 --> 00:58:11.370
+<v Koplin, Benjamin I.>He needs to not care about, like little things that might, you know.</v>
+",
+  "
+00:58:09.550 --> 00:58:10.340
+<v Bourov, Anthony>Correct.</v>
+",
+  "
+00:58:10.350 --> 00:58:10.860
+<v Bourov, Anthony>Correct.</v>
+",
+  "
+00:58:10.870 --> 00:58:12.070
+<v Bourov, Anthony>He's looking for.</v>
+",
+  "
+00:58:12.130 --> 00:58:21.900
+<v Bourov, Anthony>He's looking for a particular conclusion, so he's not looking for the for the he's not looking at the story, he's looking for the specific case for the specific case that we're covering.</v>
+",
+  "
+00:58:15.380 --> 00:58:15.660
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:58:20.510 --> 00:58:20.850
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:58:21.910 --> 00:58:23.890
+<v Bourov, Anthony>So yes, in that sense is different.</v>
+",
+  "
+00:58:23.900 --> 00:58:33.160
+<v Bourov, Anthony>So again, like I was saying, the data that you're that the analysis you're doing is very much I think what can be done and has been done.</v>
+",
+  "
+00:58:33.610 --> 00:58:39.810
+<v Bourov, Anthony>But for the most part, what what happens is the the the process gets discarded.</v>
+",
+  "
+00:58:40.060 --> 00:58:41.540
+<v Bourov, Anthony>Only the conclusion gets persisted.</v>
+",
+  "
+00:58:42.800 --> 00:58:45.300
+<v Koplin, Benjamin I.>Right, that's such a good way to say it.</v>
+",
+  "
+00:58:45.370 --> 00:58:46.560
+<v Koplin, Benjamin I.>Yeah, yeah.</v>
+",
+  "
+00:58:46.430 --> 00:58:51.060
+<v Bourov, Anthony>Like, wait, no, the people who are usually do this don't care about the story.</v>
+",
+  "
+00:58:46.610 --> 00:58:47.440
+<v Koplin, Benjamin I.>Yeah, exactly.</v>
+",
+  "
+00:58:51.070 --> 00:58:54.060
+<v Bourov, Anthony>They just care about did everything.</v>
+",
+  "
+00:58:54.110 --> 00:58:57.220
+<v Bourov, Anthony>You know, there's like that device function is thing.</v>
+",
+  "
+00:58:57.230 --> 00:59:01.580
+<v Bourov, Anthony>There was no issues check like the the final summary is like a one sentence.</v>
+",
+  "
+00:58:59.160 --> 00:58:59.440
+<v Koplin, Benjamin I.>Right.</v>
+",
+  "
+00:59:02.140 --> 00:59:02.900
+<v Koplin, Benjamin I.>Right, right.</v>
+",
+  "
+00:59:02.150 --> 00:59:06.980
+<v Bourov, Anthony>The story, so they don't really form this whole story.</v>
+",
+  "
+00:59:06.990 --> 00:59:09.270
+<v Bourov, Anthony>They can look at it and do that in their head basically.</v>
+",
+  "
+00:59:09.680 --> 00:59:10.990
+<v Koplin, Benjamin I.>Right, right, right.</v>
+",
+  "
+00:59:11.060 --> 00:59:12.000
+<v Koplin, Benjamin I.>Right, which is the hardest?</v>
+",
+  "
+00:59:12.970 --> 00:59:13.870
+<v Koplin, Benjamin I.>It's the most depressing.</v>
+",
+  "
+00:59:13.880 --> 00:59:30.200
+<v Koplin, Benjamin I.>I'm I imagine Mark the feels very frustrated sometimes when people ask them about it as analysis because getting that story out of your head and telling it to other people is so much more complicated than people appreciate than it is right because he's got years of dealing with the data.</v>
+",
+  "
+00:59:28.870 --> 00:59:29.530
+<v Bourov, Anthony>Right, right.</v>
+",
+  "
+00:59:30.680 --> 00:59:47.810
+<v Koplin, Benjamin I.>And so his story is isn't like has he's built it iteratively over a decade of just kind of like, understanding what kinds of questions result in, like, completely frustrating endpoints and what kinds of broad conclusions you can draw with caveats and just go with that.</v>
+",
+  "
+00:59:37.460 --> 00:59:37.640
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:59:48.300 --> 00:59:49.980
+<v Koplin, Benjamin I.>You know, I think so.</v>
+",
+  "
+00:59:48.780 --> 00:59:48.960
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+00:59:49.990 --> 00:59:50.710
+<v Koplin, Benjamin I.>That's interesting.</v>
+",
+  "
+00:59:50.820 --> 00:59:51.160
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+00:59:51.170 --> 00:59:51.670
+<v Koplin, Benjamin I.>Well, you're.</v>
+",
+  "
+00:59:51.760 --> 01:00:00.730
+<v Koplin, Benjamin I.>You're not just an expert in the data, you are also very observant and and and thoughtful about other people's analysis.</v>
+",
+  "
+01:00:00.820 --> 01:00:04.200
+<v Koplin, Benjamin I.>And Anthony, so alright.</v>
+",
+  "
+01:00:02.450 --> 01:00:02.690
+<v Bourov, Anthony>Well.</v>
+",
+  "
+01:00:04.840 --> 01:00:05.200
+<v Bourov, Anthony>All right.</v>
+",
+  "
+01:00:05.770 --> 01:00:07.930
+<v Mejia, Roswill>Which was a compliment, by the way, from Ben.</v>
+",
+  "
+01:00:05.870 --> 01:00:06.590
+<v Koplin, Benjamin I.>Thank you so much.</v>
+",
+  "
+01:00:11.460 --> 01:00:12.240
+<v Bourov, Anthony>I took it as such.</v>
+",
+  "
+01:00:11.900 --> 01:00:12.370
+<v Koplin, Benjamin I.>True.</v>
+",
+  "
+01:00:12.760 --> 01:00:13.010
+<v Koplin, Benjamin I.>OK.</v>
+",
+  "
+01:00:12.820 --> 01:00:13.070
+<v Mejia, Roswill>Yes.</v>
+",
+  "
+01:00:13.450 --> 01:00:13.860
+<v Bourov, Anthony>Alright.</v>
+",
+  "
+01:00:14.570 --> 01:00:15.310
+<v Koplin, Benjamin I.>Alright. Thanks guys.</v>
+",
+  "
+01:00:15.090 --> 01:00:15.430
+<v Bourov, Anthony>All right.</v>
+",
+  "
+01:00:15.440 --> 01:00:16.240
+<v Bourov, Anthony>Well, we're on time.</v>
+",
+  "
+01:00:16.250 --> 01:00:16.500
+<v Bourov, Anthony>Yeah.</v>
+",
+  "
+01:00:16.510 --> 01:00:16.950
+<v Bourov, Anthony>Take care guys.</v>
+",
+  "
+01:00:17.610 --> 01:00:18.940
+<v Mejia, Roswill>Thanks everyone. Bye.</v>
+",
+  "
+01:00:17.620 --> 01:00:17.780
+<v Koplin, Benjamin I.>Bye.</v>
+",
+  "
+01:00:17.640 --> 01:00:18.130
+<v Sayles, Richard>Makes the.</v>
+",
+  "WEBVTT
+",
+]
