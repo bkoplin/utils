@@ -1,0 +1,3 @@
+typeMap = {
+  'string[]': 'TEXT[]',
+}
