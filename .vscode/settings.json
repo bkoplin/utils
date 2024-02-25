@@ -40,5 +40,6 @@
     "yaml"
   ],
   "vitest.commandLine": "pnpm test ",
-  "vitest.enable": true
+  "vitest.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

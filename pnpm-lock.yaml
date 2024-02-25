@@ -71,6 +71,9 @@ devDependencies:
   throttle-debounce:
     specifier: 5.0.0
     version: 5.0.0
+  type-level-regexp:
+    specifier: ^0.1.17
+    version: 0.1.17
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
