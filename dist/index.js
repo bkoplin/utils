@@ -805,8 +805,8 @@
       });
       this.items = items;
       this.options = options;
-      this.promises = /* @__PURE__ */ new Set();
     }
+    promises = /* @__PURE__ */ new Set();
     get promise() {
       var _a;
       let batch;
