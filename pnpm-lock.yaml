@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@types/plv8-internal':
+    specifier: ^3.1.2
+    version: 3.1.2
   typescript-parsec:
     specifier: ^0.3.4
     version: 0.3.4
@@ -1103,6 +1106,10 @@ packages:
   /@types/normalize-package-data@2.4.0:
     resolution: {integrity: sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==}
     dev: true
+
+  /@types/plv8-internal@3.1.2:
+    resolution: {integrity: sha512-ijKV2SS6MZzbPX+p5ZFVGd0f5BCbj4v7yGq2vfh6r9Lw6/V8HrS6QRU0qSW+spo3aBj85jfoU4wv4wkW+QZViQ==}
+    dev: false
 
   /@types/resolve@1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
