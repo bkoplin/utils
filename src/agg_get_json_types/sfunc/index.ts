@@ -2,6 +2,7 @@
 import { isNull, isUndefined, objectEntries, objectMap } from '@antfu/utils'
 import { isBoolean, isDate, isJSON, isNumeric } from 'validator'
 import type { JsonObject } from 'type-fest'
+import { isArray, isObject } from 'lodash-es'
 
 export default function (state: Record<string, Array<'NULL' | 'BOOLEAN' | 'TIMESTAMPTZ' | 'NUMERIC' | 'JSONB' | 'TEXT'>>, input: JsonObject) {
   if (state === null)
@@ -11,23 +12,21 @@ export default function (state: Record<string, Array<'NULL' | 'BOOLEAN' | 'TIMES
     if (isNull(value) || isUndefined(value))
       return
     else if (typeof value !== 'string')
-      newValue = JSON.stringify(value)
+      newValue = `${value}`
     else
       newValue = value
     if (isUndefined(state[key]))
       state[key] = []
-    if (isNumeric(newValue) && !state[key].includes('NUMERIC'))
+    if ((typeof value === 'number' || isNumeric(newValue)) && !state[key].includes('NUMERIC'))
       state[key].push('NUMERIC')
 
-    else if (isBoolean(newValue, { loose: false }) && !state[key].includes('BOOLEAN'))
+    else if ((isBoolean(newValue, { loose: false }) || typeof value === 'boolean') && !state[key].includes('BOOLEAN') && typeof value !== 'number')
       state[key].push('BOOLEAN')
-
-    else if ('toISOString' in (new Date(newValue)) && value !== null && !state[key].includes('TIMESTAMPTZ') && typeof value !== 'number' && newValue.length > 1)
-      state[key].push('TIMESTAMPTZ')
-
-    else if (isJSON(newValue) && !state[key].includes('JSONB'))
+    else if ((isObject(value) || isArray(value)) && !state[key].includes('JSONB'))
       state[key].push('JSONB')
-    else if (!state[key].includes('TEXT'))
+    else if ((new Date(value)).toString() !== 'Invalid Date' && value !== null && !state[key].includes('TIMESTAMPTZ') && typeof value !== 'number' && newValue.length > 1 && typeof value !== 'boolean')
+      state[key].push('TIMESTAMPTZ')
+    else if (!state[key].includes('TEXT') && typeof value === 'string')
       state[key].push('TEXT')
   })
   return state
