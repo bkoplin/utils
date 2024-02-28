@@ -45,6 +45,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.4.4",
     "@antfu/ni": "^0.21.12",
+    "@antfu/utils": "^0.7.7",
     "@rollup/plugin-alias": "^5.1.0",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.0.1",
@@ -55,6 +56,7 @@
     "@types/node": "^20.10.4",
     "@types/throttle-debounce": "^5.0.2",
     "@types/underscore.string": "^0.0.41",
+    "@types/validator": "^13.11.9",
     "balanced-match": "^3.0.1",
     "bumpp": "^9.2.1",
     "eslint": "npm:eslint-ts-patch@8.55.0-1",
@@ -71,8 +73,10 @@
     "typescript": "^5.3.3",
     "ufo": "^1.4.0",
     "underscore.string": "^3.3.6",
+    "validator": "^13.11.0",
     "vite": "^5.0.7",
     "vitest": "^1.0.4",
-    "xregexp": "^5.1.1"
+    "xregexp": "^5.1.1",
+    "yaml": "^2.4.0"
   }
 }
