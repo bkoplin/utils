@@ -4,7 +4,7 @@ import { isBoolean, isDate, isJSON, isNumeric } from 'validator'
 import type { JsonObject } from 'type-fest'
 import { isArray, isObject } from 'lodash-es'
 
-export default function (state: Record<string, Array<'NULL' | 'BOOLEAN' | 'TIMESTAMPTZ' | 'NUMERIC' | 'JSONB' | 'TEXT'>>, input: JsonObject) {
+export default function (state: Record<string, Array<'NULL' | 'BOOLEAN' | 'TIMESTAMP' | 'NUMERIC' | 'JSONB' | 'TEXT'>>, input: JsonObject) {
   if (state === null)
     state = {}
   objectEntries(input).forEach(([key, value]) => {
@@ -24,8 +24,8 @@ export default function (state: Record<string, Array<'NULL' | 'BOOLEAN' | 'TIMES
       state[key].push('BOOLEAN')
     else if ((isObject(value) || isArray(value)) && !state[key].includes('JSONB'))
       state[key].push('JSONB')
-    else if ((new Date(value)).toString() !== 'Invalid Date' && value !== null && !state[key].includes('TIMESTAMPTZ') && typeof value !== 'number' && newValue.length > 1 && typeof value !== 'boolean')
-      state[key].push('TIMESTAMPTZ')
+    else if ((new Date(value)).toString() !== 'Invalid Date' && value !== null && !state[key].includes('TIMESTAMP') && typeof value !== 'number' && newValue.length > 1 && typeof value !== 'boolean')
+      state[key].push('TIMESTAMP')
     else if (!state[key].includes('TEXT') && typeof value === 'string')
       state[key].push('TEXT')
   })
