@@ -91,6 +91,9 @@ devDependencies:
   throttle-debounce:
     specifier: 5.0.0
     version: 5.0.0
+  type-fest:
+    specifier: ^4.10.3
+    version: 4.10.3
   type-level-regexp:
     specifier: ^0.1.17
     version: 0.1.17
@@ -3635,6 +3638,11 @@ packages:
   /type-fest@0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /type-fest@4.10.3:
+    resolution: {integrity: sha512-JLXyjizi072smKGGcZiAJDCNweT8J+AuRxmPZ1aG7TERg4ijx9REl8CNhbr36RV4qXqL1gO1FF9HL8OkVmmrsA==}
+    engines: {node: '>=16'}
     dev: true
 
   /type-level-regexp@0.1.17:
