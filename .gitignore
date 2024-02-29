@@ -80,3 +80,5 @@ typings/
 # IDE
 .idea
 *.d.ts
+.DS_Store
+.DS_Store
