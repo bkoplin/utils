@@ -1,7 +1,7 @@
 // pnpm plv8ify generate --input-file="./src/procedures/parse_splunk_logs/index.ts" --output-folder="./src/procedures/parse_splunk_logs"
 /// <reference types="@types/plv8-internal" />
 
-export function parse_splunk_logs(source_table_name: string) {
+export default function parse_splunk_logs(source_table_name: string) {
   plv8.elog(INFO, `Starting procedure to process splunk logs from ${source_table_name}, ${new Date().toISOString()}`)
   const tempTableName = `${source_table_name}_temp`
   plv8.execute(`CREATE TABLE ${tempTableName} AS (
@@ -25,6 +25,7 @@ export function parse_splunk_logs(source_table_name: string) {
           const firstConnectionTimeString = plv8.quote_nullable(first_connection_time.toISOString())
           const patchActivationTimeString = plv8.quote_nullable(patch_activation_time.toISOString())
           const sourceTableString = plv8.quote_nullable(source_table_name)
+          gatewayConnections(firstConnectionTimeString, patchActivationTimeString, sourceTableString, tempTableName, serialNumber)
           eventAnalysisRequests(firstConnectionTimeString, patchActivationTimeString, sourceTableString, tempTableName, serialNumber)
           patchCommands(firstConnectionTimeString, patchActivationTimeString, sourceTableString, tempTableName, serialNumber)
           classifierResponses(firstConnectionTimeString, patchActivationTimeString, sourceTableString, tempTableName, serialNumber)
@@ -42,6 +43,40 @@ export function parse_splunk_logs(source_table_name: string) {
   // plan.free()
 
   return null
+}
+
+function gatewayConnections(firstConnectionTimeString: string | null, patchActivationTimeString: string | null, sourceTableString: string | null, tempTableName: string, serialNumber: any) {
+  const eventAnalysisRequestsQuery = `
+SELECT
+  s.sourcetype
+  , (JSONB_POPULATE_RECORD(NULL::gateway_connection, s.log_object)).*
+  , s._raw
+  , s.log_object
+  , ${firstConnectionTimeString} ::TIMESTAMP first_connection_time
+  , ${patchActivationTimeString} ::TIMESTAMP patch_activation_time
+  , ${sourceTableString} source_table
+FROM ${tempTableName} s
+WHERE
+  s.log_object ->> 'connection_reason' IS NOT NULL
+  AND 
+  (s.log_object ->> 'serial_number') = ${plv8.quote_literal(serialNumber)}
+        `
+  try {
+    plv8.subtransaction(() => {
+      plv8.elog(INFO, `Creating table splunk_01_gateway_connections, ${new Date().toISOString()}`)
+      plv8.execute(`CREATE TABLE splunk_01_gateway_connections AS (${eventAnalysisRequestsQuery});`)
+    })
+  }
+  catch (error) {
+    plv8.elog(INFO, `CREATE TABLE splunk_01_gateway_connections failed, error message: ${error}, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `Inserting records into splunk_01_gateway_connections, ${new Date().toISOString()}`)
+    try {
+      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_01_gateway_connections ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_01_gateway_connections sub WHERE sub._raw = s._raw);`))
+    }
+    catch (e2) {
+      plv8.elog(INFO, `INSERT INTO TABLE splunk_01_gateway_connections failed, error message: ${e2}, ${new Date().toISOString()}`)
+    }
+  }
 }
 
 function eventAnalysisRequests(firstConnectionTimeString: string | null, patchActivationTimeString: string | null, sourceTableString: string | null, tempTableName: string, serialNumber: any) {
@@ -62,18 +97,18 @@ WHERE
         `
   try {
     plv8.subtransaction(() => {
-      plv8.elog(INFO, `Creating table splunk_event_analysis_requests, ${new Date().toISOString()}`)
-      plv8.execute(`CREATE TABLE splunk_event_analysis_requests AS (${eventAnalysisRequestsQuery});`)
+      plv8.elog(INFO, `Creating table splunk_02_event_analysis_requests, ${new Date().toISOString()}`)
+      plv8.execute(`CREATE TABLE splunk_02_event_analysis_requests AS (${eventAnalysisRequestsQuery});`)
     })
   }
   catch (error) {
-    plv8.elog(INFO, `CREATE TABLE splunk_event_analysis_requests failed, error message: ${error}, ${new Date().toISOString()}`)
-    plv8.elog(INFO, `Inserting records into splunk_event_analysis_requests, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `CREATE TABLE splunk_02_event_analysis_requests failed, error message: ${error}, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `Inserting records into splunk_02_event_analysis_requests, ${new Date().toISOString()}`)
     try {
-      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_event_analysis_requests ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_event_analysis_requests sub WHERE sub._raw = s._raw);`))
+      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_02_event_analysis_requests ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_02_event_analysis_requests sub WHERE sub._raw = s._raw);`))
     }
     catch (e2) {
-      plv8.elog(INFO, `INSERT INTO TABLE splunk_event_analysis_requests failed, error message: ${e2}, ${new Date().toISOString()}`)
+      plv8.elog(INFO, `INSERT INTO TABLE splunk_02_event_analysis_requests failed, error message: ${e2}, ${new Date().toISOString()}`)
     }
   }
 }
@@ -96,18 +131,18 @@ WHERE
         `
   try {
     plv8.subtransaction(() => {
-      plv8.elog(INFO, `Creating table splunk_patch_commands, ${new Date().toISOString()}`)
-      plv8.execute(`CREATE TABLE splunk_patch_commands AS (${eventAnalysisRequestsQuery});`)
+      plv8.elog(INFO, `Creating table splunk_03_patch_commands, ${new Date().toISOString()}`)
+      plv8.execute(`CREATE TABLE splunk_03_patch_commands AS (${eventAnalysisRequestsQuery});`)
     })
   }
   catch (error) {
-    plv8.elog(INFO, `CREATE TABLE splunk_patch_commands failed, error message: ${error}, ${new Date().toISOString()}`)
-    plv8.elog(INFO, `Inserting records into splunk_patch_commands, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `CREATE TABLE splunk_03_patch_commands failed, error message: ${error}, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `Inserting records into splunk_03_patch_commands, ${new Date().toISOString()}`)
     try {
-      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_patch_commands ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_patch_commands sub WHERE sub._raw = s._raw);`))
+      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_03_patch_commands ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_03_patch_commands sub WHERE sub._raw = s._raw);`))
     }
     catch (e2) {
-      plv8.elog(INFO, `INSERT INTO TABLE splunk_patch_commands failed, error message: ${e2}, ${new Date().toISOString()}`)
+      plv8.elog(INFO, `INSERT INTO TABLE splunk_03_patch_commands failed, error message: ${e2}, ${new Date().toISOString()}`)
     }
   }
 }
@@ -130,18 +165,18 @@ WHERE
         `
   try {
     plv8.subtransaction(() => {
-      plv8.elog(INFO, `Creating table splunk_classifier_responses, ${new Date().toISOString()}`)
-      plv8.execute(`CREATE TABLE splunk_classifier_responses AS (${eventAnalysisRequestsQuery});`)
+      plv8.elog(INFO, `Creating table splunk_04_classifier_responses, ${new Date().toISOString()}`)
+      plv8.execute(`CREATE TABLE splunk_04_classifier_responses AS (${eventAnalysisRequestsQuery});`)
     })
   }
   catch (error) {
-    plv8.elog(INFO, `CREATE TABLE splunk_classifier_responses failed, error message: ${error}, ${new Date().toISOString()}`)
-    plv8.elog(INFO, `Inserting records into splunk_classifier_responses, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `CREATE TABLE splunk_04_classifier_responses failed, error message: ${error}, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `Inserting records into splunk_04_classifier_responses, ${new Date().toISOString()}`)
     try {
-      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_classifier_responses ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_classifier_responses sub WHERE sub._raw = s._raw);`))
+      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_04_classifier_responses ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_04_classifier_responses sub WHERE sub._raw = s._raw);`))
     }
     catch (e2) {
-      plv8.elog(INFO, `INSERT INTO TABLE splunk_classifier_responses failed, error message: ${e2}, ${new Date().toISOString()}`)
+      plv8.elog(INFO, `INSERT INTO TABLE splunk_04_classifier_responses failed, error message: ${e2}, ${new Date().toISOString()}`)
     }
   }
 }
@@ -164,18 +199,18 @@ WHERE
         `
   try {
     plv8.subtransaction(() => {
-      plv8.elog(INFO, `Creating table splunk_classifier_receipts, ${new Date().toISOString()}`)
-      plv8.execute(`CREATE TABLE splunk_classifier_receipts AS (${eventAnalysisRequestsQuery});`)
+      plv8.elog(INFO, `Creating table splunk_05_classifier_receipts, ${new Date().toISOString()}`)
+      plv8.execute(`CREATE TABLE splunk_05_classifier_receipts AS (${eventAnalysisRequestsQuery});`)
     })
   }
   catch (error) {
-    plv8.elog(INFO, `CREATE TABLE splunk_classifier_receipts failed, error message: ${error}, ${new Date().toISOString()}`)
-    plv8.elog(INFO, `Inserting records into splunk_classifier_receipts, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `CREATE TABLE splunk_05_classifier_receipts failed, error message: ${error}, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `Inserting records into splunk_05_classifier_receipts, ${new Date().toISOString()}`)
     try {
-      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_classifier_receipts ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_classifier_receipts sub WHERE sub._raw = s._raw);`))
+      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_05_classifier_receipts ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_05_classifier_receipts sub WHERE sub._raw = s._raw);`))
     }
     catch (e2) {
-      plv8.elog(INFO, `INSERT INTO TABLE splunk_classifier_receipts failed, error message: ${e2}, ${new Date().toISOString()}`)
+      plv8.elog(INFO, `INSERT INTO TABLE splunk_05_classifier_receipts failed, error message: ${e2}, ${new Date().toISOString()}`)
     }
   }
 }
@@ -202,18 +237,18 @@ WHERE
         `
   try {
     plv8.subtransaction(() => {
-      plv8.elog(INFO, `Creating table splunk_event_actions, ${new Date().toISOString()}`)
-      plv8.execute(`CREATE TABLE splunk_event_actions AS (${eventAnalysisRequestsQuery});`)
+      plv8.elog(INFO, `Creating table splunk_06_event_actions, ${new Date().toISOString()}`)
+      plv8.execute(`CREATE TABLE splunk_06_event_actions AS (${eventAnalysisRequestsQuery});`)
     })
   }
   catch (error) {
-    plv8.elog(INFO, `CREATE TABLE splunk_event_actions failed, error message: ${error}, ${new Date().toISOString()}`)
-    plv8.elog(INFO, `Inserting records into splunk_event_actions, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `CREATE TABLE splunk_06_event_actions failed, error message: ${error}, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `Inserting records into splunk_06_event_actions, ${new Date().toISOString()}`)
     try {
-      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_event_actions ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_event_actions sub WHERE sub._raw = s._raw);`))
+      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_06_event_actions ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_06_event_actions sub WHERE sub._raw = s._raw);`))
     }
     catch (e2) {
-      plv8.elog(INFO, `INSERT INTO TABLE splunk_event_actions failed, error message: ${e2}, ${new Date().toISOString()}`)
+      plv8.elog(INFO, `INSERT INTO TABLE splunk_06_event_actions failed, error message: ${e2}, ${new Date().toISOString()}`)
     }
   }
 }
@@ -236,96 +271,21 @@ WHERE
         `
   try {
     plv8.subtransaction(() => {
-      plv8.elog(INFO, `Creating table splunk_review_outputs, ${new Date().toISOString()}`)
-      plv8.execute(`CREATE TABLE splunk_review_outputs AS (${eventAnalysisRequestsQuery});`)
+      plv8.elog(INFO, `Creating table splunk_07_review_outputs, ${new Date().toISOString()}`)
+      plv8.execute(`CREATE TABLE splunk_07_review_outputs AS (${eventAnalysisRequestsQuery});`)
     })
   }
   catch (error) {
-    plv8.elog(INFO, `CREATE TABLE splunk_review_outputs failed, error message: ${error}, ${new Date().toISOString()}`)
-    plv8.elog(INFO, `Inserting records into splunk_review_outputs, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `CREATE TABLE splunk_07_review_outputs failed, error message: ${error}, ${new Date().toISOString()}`)
+    plv8.elog(INFO, `Inserting records into splunk_07_review_outputs, ${new Date().toISOString()}`)
     try {
-      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_review_outputs ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_review_outputs sub WHERE sub._raw = s._raw);`))
+      plv8.subtransaction(() => plv8.execute(`INSERT INTO splunk_07_review_outputs ${eventAnalysisRequestsQuery} AND NOT EXISTS(SELECT 1 FROM splunk_07_review_outputs sub WHERE sub._raw = s._raw);`))
     }
     catch (e2) {
-      plv8.elog(INFO, `INSERT INTO TABLE splunk_review_outputs failed, error message: ${e2}, ${new Date().toISOString()}`)
+      plv8.elog(INFO, `INSERT INTO TABLE splunk_07_review_outputs failed, error message: ${e2}, ${new Date().toISOString()}`)
     }
   }
 }
-// WITH RECURSIVE pa_record AS (
-//   SELECT
-//       SUBSTRING(s._raw, '\[(A\d+)\]') serial_number
-//       , (s.log_object ->> 'patch_activation_time') ::TIMESTAMP patch_activation_time
-//   FROM splunk_sample_rs s
-//   WHERE s.log_object @@ '$.patch_activation_time != null'
-// ), first_connection AS (
-//   SELECT
-//       SUBSTRING(s._raw, '\[(A\d+)\]') serial_number
-//       , (s.log_object ->> 'log_time') ::TIMESTAMP first_connection_time
-//   FROM splunk_sample_rs s
-//   WHERE s.log_object @@ '$.connection_reason == "FIRST_CONNECTION"'
-// ), event_requests AS (
-//   SELECT
-//       s.sourcetype
-//       , (JSONB_POPULATE_RECORD(NULL::event_analysis_request, s.log_object)).*
-//       , s._raw
-//       , s.log_object
-//   FROM splunk_sample_rs s
-//   WHERE
-//       s._raw ~ 'Created analysis request'
-// ), patch_commands AS (
-//   SELECT
-//       s.sourcetype
-//       , (JSONB_POPULATE_RECORD(NULL::event_patch_command, s.log_object)).*
-//       , s._raw
-//       , s.log_object
-//   FROM splunk_sample_rs s
-//   WHERE
-//       s.log_object @@ '$.analysis_request_id != null'
-// ), classifier_responses AS (
-//   SELECT
-//       s.sourcetype
-//       , (JSONB_POPULATE_RECORD(NULL::event_classifier_response, s.log_object)).*
-//       , s._raw
-//       , s.log_object
-//   FROM splunk_sample_rs s
-//   WHERE
-//       s._raw ~ '(\yEventDataMessageHandler\y.+received event)'
-// ), classifier_receipts AS (
-//   SELECT
-//       s.sourcetype
-//       , (JSONB_POPULATE_RECORD(NULL::event_classifier_receipt, s.log_object)).*
-//       , s._raw
-//       , s.log_object
-//   FROM splunk_sample_rs s
-//   WHERE
-//       s._raw ~ '(RoutingServiceProvider - event="transmission.received")'
-// ), classifier_action AS (
-//   SELECT
-//       s.sourcetype
-//       , (JSONB_POPULATE_RECORD(NULL::event_action, s.log_object)).*
-//       , s._raw
-//       , s.log_object
-//   FROM splunk_sample_rs s
-//   WHERE
-// s._raw ~ 'TransmissionFilter - event="transmission.filtered"'
-// OR
-// s._raw ~ 'EcgDlResultsProcessor - event="transmission.algorithm_processing_completed"'
-// ), review_output AS (
-//   SELECT
-//       s.sourcetype
-//       , (JSONB_POPULATE_RECORD(NULL::skyrunner_review_output, s.log_object)).*
-//       , s._raw
-//       , s.log_object
-//   FROM splunk_sample_rs s
-//   WHERE sourcetype = 'skyrunner_ws'
-// )
-// SELECT *
-// FROM patch_commands
-// -- FROM patch_commands cr
-// -- JOIN pa_record USING(serial_number)
-// -- JOIN first_connection USING(serial_number)
-// -- ORDER BY log_object ->> 'log_time'
-// LIMIT 100
 
 /*
 CASE
